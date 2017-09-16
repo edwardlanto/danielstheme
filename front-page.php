@@ -42,11 +42,11 @@
                     </ul>
                     <div class="resume-container container">
                         <div class="resume1 resume col-sm-5">
-                            <p>Award winning visual artist and graphic<br/> designer with experience in editorial<br/> designing</p>
+                            <p>Award winning visual artist and graphic  designer with experience in editorial  designing</p>
                             <a href="#" class="yellow-button">Download Resume</a>
                         </div><!--resume1-->
                         <div class="resume2 resume col-sm-5">
-                            <p>Award winning and graphic designer<br/> with experiecne in editorial<br/> design, branding, t, oil painting.</p>
+                            <p>Award winning and graphic designer  with experiecne in editorial  design, branding, t, oil painting.</p>
                             <a href="#" class="yellow-button">Descargar Curriculum</a>
                         </div> 
                     </div><!--resume-container-->
@@ -71,8 +71,8 @@
                     ?>
                         </ul>
                         <div class="learn-more-container">
-                            <p>Award winning visual artist and<br/>
-                            graphic designer with experience<br/>
+                            <p>Award winning visual artist and 
+                            graphic designer with experience 
                             in editorial branding.</p>
                             <a href="#" class="learn-more-btn">Learn More</a>
                         </div>
@@ -82,15 +82,15 @@
                 </section>
                 <section class="client-section">
                 <h2 class="clients-header">Clients</h2>
-                    <ul class="container row client-list">
+                    <ul class="container row clients-list">
                         <li class="col-sm-offset-2 col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
                         <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
                         <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
                         <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
                         <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
                     </ul>  
-
                 </section>
+                <?php get_sidebar(); ?>
                 
 
             </div><!--hero-container-->

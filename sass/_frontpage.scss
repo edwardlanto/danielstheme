@@ -40,7 +40,7 @@
 
     //About Me Section
 
-    .about-header, .portfolio-header, .clients-header {
+    .about-header, .portfolio-header{
         font-size: 35px;
         margin-left: 30.7%;
     }
@@ -64,7 +64,7 @@
         left: 0;
         bottom: -13px;
         width: 34%;
-        border-bottom: 4px solid #000;
+        border-bottom: 5px solid #000;
     }
 
     //Folding Paper Animation
@@ -113,6 +113,7 @@
     .resume {
         p {
             color: $main_font_color;
+            max-width:200px;
         }
 
         a {
@@ -123,7 +124,7 @@
     }
 
     .portfolio-section{
-        margin-bottom:500px;
+        margin-bottom:30vw;
         margin-top:11vw;
     }
 
@@ -138,6 +139,7 @@
         bottom: 7px;
             p{
                 color:$main_font_color;
+                max-width:200px;
             }
             a{
                 background:$main_color;
@@ -199,7 +201,19 @@
         display: flex;
         align-items: flex-end;
     }
-}
+
+    //Client Section
+
+    .clients-header{
+        margin-left:30.7%;
+    }
+
+    .clients-list{
+        margin-top:145px;
+    }
+
+
+}//Home Wrapper
 
 #slideshow {
     margin: 50px auto;
