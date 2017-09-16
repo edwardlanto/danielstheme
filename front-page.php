@@ -52,7 +52,7 @@
                     </div><!--resume-container-->
                 </section><!--about-me-section-->
                 <section class="portfolio-section">
-                    <div class="portfolio-hero"></div>
+                    <div class="portfolio-hero">
                     <div class="portfolio-container">
                         <h2 class="portfolio-header">Portfolio</h2> 
                         <ul id="portfolio-list">
@@ -70,7 +70,26 @@
                         wp_reset_postdata();
                     ?>
                         </ul>
+                        <div class="learn-more-container">
+                            <p>Award winning visual artist and<br/>
+                            graphic designer with experience<br/>
+                            in editorial branding.</p>
+                            <a href="#" class="learn-more-btn">Learn More</a>
+                        </div>
                     </div><!--portfolio-container-->
+                    </div>
+                    
+                </section>
+                <section class="client-section">
+                <h2 class="clients-header">Clients</h2>
+                    <ul class="container row client-list">
+                        <li class="col-sm-offset-2 col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
+                        <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
+                        <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
+                        <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
+                        <li class="col-sm-2"><img src="<?php echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
+                    </ul>  
+
                 </section>
                 
 

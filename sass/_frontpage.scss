@@ -1,4 +1,7 @@
 .home {
+
+    overflow-x:hidden;
+
     .polygon2 {
         background: linear-gradient(-15deg, #fff 23%, transparent 0), linear-gradient(30deg, #fff 16%, gold 0);
         height: 56vw;
@@ -12,7 +15,7 @@
     .hero-icon {
         position: absolute;
         left: 55%;
-        top: 9.4vw;
+        top: 9.2vw;
         height: 40vw;
     }
 
@@ -37,26 +40,25 @@
 
     //About Me Section
 
-    .about-header, .portfolio-header {
+    .about-header, .portfolio-header, .clients-header {
         font-size: 35px;
         margin-left: 30.7%;
     }
 
     .about-me-section {
         position: relative;
-        min-height: 680px;
-        height: 60vw;
         padding-top: 13rem;
+        min-height: 743px;
     }
 
-    .about-header, .portfolio-header {
+    .about-header, .portfolio-header, .clients-header {
         width: 220px;
         height: 40px;
         position: relative;
         z-index: 1;
     }
 
-    .about-header:before, .portfolio-header:before {
+    .about-header:before, .portfolio-header:before, .clients-header:before {
         content: "";
         position: absolute;
         left: 0;
@@ -110,18 +112,38 @@
 
     .resume {
         p {
-            color: #d7d6d5;
+            color: $main_font_color;
         }
 
         a {
-            background: #f7d231;
+            background: $main_color;
             color: #000;
             padding: 7px 20px;
         }
     }
 
     .portfolio-section{
+        margin-bottom:500px;
         margin-top:11vw;
+    }
+
+    .portfolio-container{
+        transform: translate(-50px, 219px);
+        position:relative;
+    }
+
+    .learn-more-container{
+        position: absolute;
+        left: 69%;
+        bottom: 7px;
+            p{
+                color:$main_font_color;
+            }
+            a{
+                background:$main_color;
+                color:#000;
+                padding:10px 25px;
+            }    
     }
 
     .portfolio-hero {
@@ -129,21 +151,30 @@
         background-size: 100vw 500px;
         height: 500px;
     }
+    
+    .portfolio-header{
+        margin-left: 34.5%;        
+    }
 
     #portfolio-list {
         margin: 50px auto;
         position: relative;
-        width: 24%;
-        height: 31vw;
+        width: 31%;
+        height: 41vw;
         padding: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         overflow: hidden;
+        margin-left:34.5%;
 
         .portfolio-picture {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
         }
     }
 
@@ -164,7 +195,9 @@
 
     .resume-container{
         margin-left:28%;
-        margin-top:158px;
+        margin-top:15%;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
