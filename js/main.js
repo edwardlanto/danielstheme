@@ -9,4 +9,13 @@
         .end()
         .appendTo('#portfolio-list');
     },  3000);
+
+    //Bootstrap add classes to widgets
+
+    $('.widget-title').addClass('col-sm-offset-4');
+    // $('.widget_custom_html').addClass('container');
+
+    $('.widget_custom_html').css({
+        "text-align":"center"
+    })
 })(jQuery);
