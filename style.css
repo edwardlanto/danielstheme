@@ -318,7 +318,7 @@ big {
     position: absolute;
     top: 87%;
     right: 54%; }
-  .home .about-header, .home .portfolio-header {
+  .home .about-header, .home .portfolio-header, .home .clients-header {
     font-size: 39px;
     margin-left: 30.7%; }
   .home .about-me-section {
@@ -366,12 +366,14 @@ big {
   .home .resume p {
     color: #d7d6d5;
     font-size: 19px;
-    font-family: Lato,sans-serif;
-    max-width: 350px; }
+    font-family: 'Lato',sans-serif;
+    max-width: 350px;
+    font-weight: 300;
+    margin-bottom: 36px; }
   .home .resume a {
     background: #f7d231;
     color: #000;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Lato', sans-serif;
     padding: 7px 20px; }
   .home .portfolio-section {
@@ -382,7 +384,7 @@ big {
     transform: translate(-76px, 190px);
     position: relative; }
   .home .learn-more-container {
-    transform: translate(74%, -244%); }
+    transform: translate(76%, -190%); }
     .home .learn-more-container p {
       color: #d7d6d5;
       max-width: 265px;
@@ -434,12 +436,14 @@ big {
         font-size: 21px;
         margin-top: 24px; }
   .home .resume-container {
-    margin-left: 28%;
+    margin-left: 27%;
     margin-top: 15%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: end;
         align-items: flex-end; }
+  .home .client-section {
+    margin-bottom: 160px; }
   .home .widget-title {
     text-align: left;
     position: relative;
@@ -472,16 +476,22 @@ big {
     padding-top: 25%; }
   .home .widget_title {
     text-align: left; }
-  .home .clients-header {
-    margin-left: 28.7%;
-    font-size: 39px; }
   .home .clients-list {
+    margin: 0 auto;
     margin-top: 145px; }
   .home .widget {
     margin: 0 0 0 0 !important; }
   .home #secondary {
     background: url("../../assets/contact-me-bg.png") no-repeat;
-    background-size: 100%; }
+    background-size: 100%;
+    padding-bottom: 35px; }
+  .home .yellow-button {
+    transition: all 0.3s linear;
+    cursor: pointer;
+    border: 2px solid #f7d231; }
+    .home .yellow-button:hover {
+      background: #fff;
+      text-decoration: none; }
 
 #slideshow {
   margin: 50px auto;

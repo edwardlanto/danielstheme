@@ -46,7 +46,7 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                         </li>
                     </ul>
                     <div class="resume-container container">
-                        <div class="resume1 resume col-sm-5">
+                        <div class="resume1 resume col-sm-4">
                             <p>Award winning visual artist and graphic  designer with experience in editorial  designing</p>
                             <a href="#" class="yellow-button">Download Resume</a>
                         </div><!--resume1-->
@@ -85,7 +85,7 @@ wp_reset_postdata();
                             <p>Award winning visual artist and 
                             graphic designer with experience 
                             in editorial branding.</p>
-                            <a href="#" class="learn-more-btn">Learn More</a>
+                            <a href="#" class="learn-more-btn yellow-button">Learn More</a>
                         </div><!--learn-more-container-->
                     </div><!--portfolio-container-->
                     

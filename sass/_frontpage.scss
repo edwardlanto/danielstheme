@@ -44,9 +44,10 @@
 
     //About Me Section
 
-    .about-header, .portfolio-header {
+    .about-header, .portfolio-header, .clients-header {
         font-size: 39px;
         margin-left: 30.7%;
+
     }
 
     .about-me-section {
@@ -116,14 +117,16 @@
         p {
             color: #d7d6d5;
             font-size: 19px;
-            font-family: Lato,sans-serif;
+            font-family: 'Lato',sans-serif;
             max-width: 350px;
+            font-weight:300;
+            margin-bottom:36px;
         }
 
         a {
             background: $main_color;
             color: #000;
-            font-size:18px;
+            font-size:17px;
             font-family:'Lato', sans-serif;
             padding: 7px 20px;
         }
@@ -141,7 +144,7 @@
     }
 
     .learn-more-container {
-        transform: translate(74%,-244%);
+        transform: translate(76%,-190%);
 
         p {
             color: $main_font_color;
@@ -220,13 +223,17 @@
     }
 
     .resume-container {
-        margin-left: 28%;
+        margin-left: 27%;
         margin-top: 15%;
         display: flex;
         align-items: flex-end;
     }
 
     //Client Section
+
+    .client-section{
+        margin-bottom:160px;
+    }
 
     .widget-title{
         text-align:left;
@@ -278,12 +285,13 @@
         text-align: left;
     }
 
-    .clients-header {
-        margin-left: 28.7%;
-        font-size:39px;
-    }
+    // .clients-header {
+    //     margin-left: 28.7%;
+    //     font-size:39px;
+    // }
 
     .clients-list {
+        margin:0 auto;
         margin-top: 145px;
     }
 
@@ -296,6 +304,17 @@
     #secondary {
         background: url("../../assets/contact-me-bg.png") no-repeat;
         background-size: 100%;
+        padding-bottom:35px;
+    }
+
+    .yellow-button{
+        transition:all 0.3s linear;
+        cursor:pointer;
+        border:2px solid $main_color;
+            &:hover{
+                background:#fff;
+                text-decoration:none;
+            }
     }
 }
 
