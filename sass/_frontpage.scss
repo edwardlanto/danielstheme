@@ -1,6 +1,20 @@
 .home {
     overflow-x: hidden;
 
+    .nav-list{
+        padding: 3% 9.5%;
+        font-size: 27px;
+        transform: translateX(0px);
+        font-weight:300;
+        font-family:'Lato', sans-serif;
+        transition:all 0.3s linear;
+            li{
+                &:hover{
+                    font-weight:400;
+                }
+            }
+    }
+
     .polygon2 {
         background: linear-gradient(-15deg, #fff 23%, transparent 0), linear-gradient(30deg, #fff 16%, gold 0);
         height: 56vw;
@@ -20,9 +34,9 @@
 
     .name-container {
         display: inline-block;
-        left: 31vw;
+        left: 30vw;
         position: relative;
-        top: 60%;
+        top: 19vw;
 
         h2 {
             margin-top: 32px;
@@ -52,7 +66,7 @@
 
     .about-me-section {
         position: relative;
-        padding-top: 13rem;
+        padding-top: 24rem;
         min-height: 743px;
     }
 
@@ -149,7 +163,8 @@
         p {
             color: $main_font_color;
             max-width: 265px;
-            font-size:'Lato', sans-serif;
+            font-weight:'Lato', sans-serif;
+            margin-bottom:36px;
             font-size:18px;
             font-weight:300;
         }
@@ -177,14 +192,14 @@
     }
 
     #portfolio-list {
-        margin: 50px auto;
+        margin: 73px auto;
         position: relative;
-        width: 39%;
-        height: 45vw;
+        width: 31%;
+        height: 42vw;
         padding: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 20px rgba(0,0,0,.4);
         overflow: hidden;
-        margin-left: 34.5%;
+        margin-left: 34.5%;    
 
         .portfolio-picture {
             position: absolute;
@@ -223,8 +238,8 @@
     }
 
     .resume-container {
-        margin-left: 27%;
-        margin-top: 15%;
+        margin-left: 28%;
+        margin-top: 7%;
         display: flex;
         align-items: flex-end;
     }
@@ -248,6 +263,7 @@
 
         textarea {
             height: 230px;
+            padding-top:20px;
         }
 
         input {
@@ -260,6 +276,7 @@
             padding-left: 25px;
             font-size: 19px;
             font-family: 'Lato', sans-serif;
+            font-weight:300;
             letter-spacing:0.5px;
             color: #a2a197;
         }

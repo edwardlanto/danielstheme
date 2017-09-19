@@ -292,6 +292,15 @@ big {
 .home {
   overflow-x: hidden;
   /* Hover states to trigger animations */ }
+  .home .nav-list {
+    padding: 3% 9.5%;
+    font-size: 27px;
+    transform: translateX(0px);
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    transition: all 0.3s linear; }
+    .home .nav-list li:hover {
+      font-weight: 400; }
   .home .polygon2 {
     background: linear-gradient(-15deg, #fff 23%, transparent 0), linear-gradient(30deg, #fff 16%, gold 0);
     height: 56vw;
@@ -304,9 +313,9 @@ big {
     height: 40vw; }
   .home .name-container {
     display: inline-block;
-    left: 31vw;
+    left: 30vw;
     position: relative;
-    top: 60%; }
+    top: 19vw; }
     .home .name-container h2 {
       margin-top: 32px;
       font-size: 42px; }
@@ -323,7 +332,7 @@ big {
     margin-left: 30.7%; }
   .home .about-me-section {
     position: relative;
-    padding-top: 13rem;
+    padding-top: 24rem;
     min-height: 743px; }
   .home .about-header, .home .portfolio-header, .home .clients-header {
     width: 220px;
@@ -388,7 +397,8 @@ big {
     .home .learn-more-container p {
       color: #d7d6d5;
       max-width: 265px;
-      font-size: 'Lato', sans-serif;
+      font-weight: 'Lato', sans-serif;
+      margin-bottom: 36px;
       font-size: 18px;
       font-weight: 300; }
     .home .learn-more-container a {
@@ -404,10 +414,10 @@ big {
   .home .portfolio-header {
     margin-left: 34.5%; }
   .home #portfolio-list {
-    margin: 50px auto;
+    margin: 73px auto;
     position: relative;
-    width: 39%;
-    height: 45vw;
+    width: 31%;
+    height: 42vw;
     padding: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     overflow: hidden;
@@ -436,8 +446,8 @@ big {
         font-size: 21px;
         margin-top: 24px; }
   .home .resume-container {
-    margin-left: 27%;
-    margin-top: 15%;
+    margin-left: 28%;
+    margin-top: 7%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: end;
@@ -453,7 +463,8 @@ big {
     width: 75%;
     margin: 0 auto; }
     .home form textarea {
-      height: 230px; }
+      height: 230px;
+      padding-top: 20px; }
     .home form input {
       height: 40px; }
     .home form input, .home form textarea {
@@ -462,6 +473,7 @@ big {
       padding-left: 25px;
       font-size: 19px;
       font-family: 'Lato', sans-serif;
+      font-weight: 300;
       letter-spacing: 0.5px;
       color: #a2a197; }
     .home form .wpcf7-submit {
@@ -507,6 +519,25 @@ big {
   left: 10px;
   right: 10px;
   bottom: 10px; }
+
+.page-template-portfolio {
+  /*  #Mobile (Portrait) - Note: Design for a width of 320px */
+  /* #Mobile (Landscape) - Note: Design for a width of 480px */ }
+  .page-template-portfolio .main-portfolio-picture img {
+    width: 300px;
+    max-height: 200px; }
+  @media only screen and (min-width: 768px) and (max-width: 959px) {
+    .page-template-portfolio .container {
+      width: 768px; } }
+  @media only screen and (max-width: 767px) {
+    .page-template-portfolio .container {
+      width: 95%; }
+    .page-template-portfolio #portfoliolist .portfolio {
+      width: 48%;
+      margin: 1%; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .page-template-portfolio .container {
+      width: 70%; } }
 
 /*--------------------------------------------------------------
 # Forms

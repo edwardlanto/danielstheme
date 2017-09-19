@@ -6,6 +6,12 @@ get_header() ?>
 		<main id="main" class="site-main" role="main">
             <div class="polygon-wrapper">
                 <div class="polygon2">
+                        <ul class="nav-list container row pull-right">
+                            <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
+                            <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">My Work</a></li>
+                            <li class="nav-item col-sm-3"><a href="#clients">Clients</a></li>
+                            <li class="nav-item col-sm-3"><a href="#contact">Contact Me</a></li>
+                        </ul>
                     <div class="name-container">
                         <h2>Daniel Valdes</h2>
                         <p>Graphic Design and Illustrator</p>
@@ -16,7 +22,7 @@ echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" al
 echo get_template_directory_uri(); ?>/assets/flap.png" alt="" class="flap">
                 </div><!--polygon2-->
             </div><!--polygonwrapper"-->
-            <section class="about-me-section">
+            <section class="about-me-section" id="about">
                 <h2 class="about-header">About Me</h2>
                 <ul class="skill-list">
                     <li>
@@ -90,7 +96,7 @@ wp_reset_postdata();
                     </div><!--portfolio-container-->
                     
                 </section>
-                <section class="client-section">
+                <section class="client-section" id="clients">
                 <h2 class="clients-header">Clients</h2>
                     <ul class="container row clients-list">
                         <li class="col-sm-offset-2 col-sm-2"><img src="<?php
