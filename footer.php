@@ -17,7 +17,11 @@
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-	<script rel="text/javascript" href="./js/main.js"></script>
-	<script rel="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script src="./js/jquery.filterizr.min.min"/></script> -->
+	<script type="text/javascript" href="./js/main.js"></script>
+	<script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <script>
+
+	</script> -->
 	</body>
 </html>

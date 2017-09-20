@@ -66,7 +66,7 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                     <div class="portfolio-hero">
                     <div class="portfolio-container">
                         <h2 class="portfolio-header">Portfolio</h2> 
-                        <ul id="portfolio-list">
+                        <ul id="portfolio-list" class="filtr-container">
                         <?php
 $loop = new WP_Query(array(
 	'post_type' => 'pictures'
@@ -76,7 +76,7 @@ if ($loop->have_posts()):
 	while ($loop->have_posts()):
 		$loop->the_post(); ?>
                              
-                            <li class="portfolio-picture">
+                            <li class="portfolio-picture" filter="1" data-sort="value"> d
                                 <?php
 		the_post_thumbnail(); ?>
                             </li>

@@ -6,27 +6,26 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-        <ul class="nav-list container row pull-right">
+        <!-- <ul class="nav-list container row pull-right">
             <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
             <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">My Work</a></li>
             <li class="nav-item col-sm-3"><a href="#clients">Clients</a></li>
             <li class="nav-item col-sm-3"><a href="#contact">Contact Me</a></li>
-        </ul>
+        </ul> -->
         <section class="portfolio-gallery">
-        <ul>
+        <div class="shuffle-nav-wrapper">
+        <ul class="shuffle-nav container">
            <!-- For filtering controls add -->
-           <li data-filter="all"> All items </li>
-           <li data-filter="1"> Category 1 </li>
-           <li data-filter="2"> Category 2 </li>
-           <li data-filter="3"> Category 3 </li>
-           <!-- For a shuffle control add -->
-           <li data-shuffle> Shuffle items </li>
-           <!-- For sorting controls add -->
-           <li data-sortAsc> Ascending </li>
-           <li data-sortDesc> Descending </li>
+           <li class="col-sm-1 col-sm-offset-3" data-filter="1">Web </li>
+           <li class="col-sm-1" data-filter="2">Editorial</li>
+           <li class="col-sm-1" data-filter="3">Branding</li>
+           <li class="col-sm-1" data-filter="4">Lavel</li>
+           <li class="col-sm-1" class="first-shuffle" data-shuffle>Infographic</li>
+            <li class="col-sm-1" data-filter="6">Illustation</li>
         </ul>
+        </div>
 <div id="portfolio-list">
-        <ul id="main-list" class="filtr-container">
+        <div id="main-list" class="filtr-container container">
                         <?php
 $loop = new WP_Query(array(
 	'post_type' => 'pictures'
@@ -36,10 +35,10 @@ if ($loop->have_posts()):
 	while ($loop->have_posts()):
 		$loop->the_post(); ?>
                              
-                            <li class="filtr-item" data-category="1" data-sort="value">
+                            <div class="filtr-item col-sm-4" data-category="1" data-sort="value">
                                 <?php
 		the_post_thumbnail(); ?>
-                            </li>
+                            </div>
                                 
                             <?php
 	endwhile;

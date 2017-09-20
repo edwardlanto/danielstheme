@@ -523,9 +523,26 @@ big {
 .page-template-portfolio {
   /*  #Mobile (Portrait) - Note: Design for a width of 320px */
   /* #Mobile (Landscape) - Note: Design for a width of 480px */ }
+  .page-template-portfolio .shuffle-nav-wrapper {
+    background: #f7d231;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    height: 50px;
+    font-size: 20px; }
+  .page-template-portfolio .item {
+    color: red; }
   .page-template-portfolio .main-portfolio-picture img {
     width: 300px;
     max-height: 200px; }
+  .page-template-portfolio .main-list {
+    position: static; }
+  .page-template-portfolio .wp-post-image {
+    height: auto;
+    width: 100%; }
+  .page-template-portfolio .filtr-item {
+    padding: 0 1%; }
   @media only screen and (min-width: 768px) and (max-width: 959px) {
     .page-template-portfolio .container {
       width: 768px; } }
@@ -538,6 +555,9 @@ big {
   @media only screen and (min-width: 480px) and (max-width: 767px) {
     .page-template-portfolio .container {
       width: 70%; } }
+  @media (min-width: 1200px) {
+    .page-template-portfolio .container {
+      width: 1500px; } }
 
 /*--------------------------------------------------------------
 # Forms
