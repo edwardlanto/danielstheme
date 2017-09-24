@@ -213,6 +213,178 @@ td,
 th {
   padding: 0; }
 
+/* Preload images */
+body:after {
+  content: url(../images/close.png) url(../images/loading.gif) url(../images/prev.png) url(../images/next.png);
+  display: none; }
+
+body.lb-disable-scrolling {
+  overflow: hidden; }
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none; }
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal; }
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  /* Image border */
+  border: 4px solid white; }
+
+.lightbox a img {
+  border: none; }
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white; }
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0; }
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../images/loading.gif) no-repeat; }
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+.lb-container > .nav {
+  left: 0; }
+
+.lb-nav a {
+  outline: none;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="); }
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block; }
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  transition: opacity 0.6s; }
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc; }
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em; }
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em; }
+
+.lb-data .lb-caption a {
+  color: #4ae; }
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999; }
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  transition: opacity 0.2s; }
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1; }
+
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
@@ -292,15 +464,6 @@ big {
 .home {
   overflow-x: hidden;
   /* Hover states to trigger animations */ }
-  .home .nav-list {
-    padding: 3% 9.5%;
-    font-size: 27px;
-    transform: translateX(0px);
-    font-weight: 300;
-    font-family: 'Lato', sans-serif;
-    transition: all 0.3s linear; }
-    .home .nav-list li:hover {
-      font-weight: 400; }
   .home .polygon2 {
     background: linear-gradient(-15deg, #fff 23%, transparent 0), linear-gradient(30deg, #fff 16%, gold 0);
     height: 56vw;
@@ -315,7 +478,7 @@ big {
     display: inline-block;
     left: 30vw;
     position: relative;
-    top: 19vw; }
+    top: 50%; }
     .home .name-container h2 {
       margin-top: 32px;
       font-size: 42px; }
@@ -325,8 +488,9 @@ big {
   .home .flap {
     width: 16%;
     position: absolute;
-    top: 87%;
-    right: 54%; }
+    top: 87.3%;
+    right: 53.4%;
+    transform: rotate(-1deg); }
   .home .about-header, .home .portfolio-header, .home .clients-header {
     font-size: 39px;
     margin-left: 30.7%; }
@@ -393,7 +557,7 @@ big {
     transform: translate(-76px, 190px);
     position: relative; }
   .home .learn-more-container {
-    transform: translate(76%, -190%); }
+    transform: translate(70%, -190%); }
     .home .learn-more-container p {
       color: #d7d6d5;
       max-width: 265px;
@@ -408,9 +572,9 @@ big {
       font-size: 15px;
       font-family: 'Lato', sans-serif; }
   .home .portfolio-hero {
-    background: url(../../assets/portfolio-cutout2.png) no-repeat 50%;
-    background-size: 100vw 500px;
-    height: 550px; }
+    background: url("../../assets/portfolio-cutout2.png") no-repeat center;
+    background-size: 100vw 633px;
+    height: 612px; }
   .home .portfolio-header {
     margin-left: 34.5%; }
   .home #portfolio-list {
@@ -454,56 +618,11 @@ big {
         align-items: flex-end; }
   .home .client-section {
     margin-bottom: 160px; }
-  .home .widget-title {
-    text-align: left;
-    position: relative;
-    top: 12vw;
-    font-size: 40px; }
-  .home form {
-    width: 75%;
-    margin: 0 auto; }
-    .home form textarea {
-      height: 230px;
-      padding-top: 20px; }
-    .home form input {
-      height: 40px; }
-    .home form input, .home form textarea {
-      background: #fdf8d9;
-      width: 35vw;
-      padding-left: 25px;
-      font-size: 19px;
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      letter-spacing: 0.5px;
-      color: #a2a197; }
-    .home form .wpcf7-submit {
-      box-shadow: none;
-      width: 145px;
-      margin-right: 15px;
-      /* text-align: center; */
-      padding: 0;
-      /* text-align: center; */
-      float: right; }
-  .home .custom-html-widget {
-    padding-top: 25%; }
-  .home .widget_title {
-    text-align: left; }
   .home .clients-list {
     margin: 0 auto;
     margin-top: 145px; }
   .home .widget {
     margin: 0 0 0 0 !important; }
-  .home #secondary {
-    background: url("../../assets/contact-me-bg.png") no-repeat;
-    background-size: 100%;
-    padding-bottom: 35px; }
-  .home .yellow-button {
-    transition: all 0.3s linear;
-    cursor: pointer;
-    border: 2px solid #f7d231; }
-    .home .yellow-button:hover {
-      background: #fff;
-      text-decoration: none; }
 
 #slideshow {
   margin: 50px auto;
@@ -523,6 +642,14 @@ big {
 .page-template-portfolio {
   /*  #Mobile (Portrait) - Note: Design for a width of 320px */
   /* #Mobile (Landscape) - Note: Design for a width of 480px */ }
+  .page-template-portfolio h1 {
+    font-size: 50px; }
+  .page-template-portfolio .nav-list {
+    margin-bottom: 250px; }
+  .page-template-portfolio .space-out {
+    width: auto; }
+  .page-template-portfolio .bold-item {
+    font-weight: bold; }
   .page-template-portfolio .shuffle-nav-wrapper {
     background: #f7d231;
     display: -ms-flexbox;
@@ -530,7 +657,10 @@ big {
     -ms-flex-align: center;
         align-items: center;
     height: 50px;
-    font-size: 20px; }
+    font-size: 30px;
+    margin-bottom: 36px; }
+  .page-template-portfolio .wp-post-image {
+    border-radius: 15px; }
   .page-template-portfolio .item {
     color: red; }
   .page-template-portfolio .main-portfolio-picture img {
@@ -543,6 +673,10 @@ big {
     width: 100%; }
   .page-template-portfolio .filtr-item {
     padding: 0 1%; }
+  .page-template-portfolio .button-active {
+    font-weight: bold; }
+  .page-template-portfolio .button-inactive {
+    font-weight: 100; }
   @media only screen and (min-width: 768px) and (max-width: 959px) {
     .page-template-portfolio .container {
       width: 768px; } }
@@ -558,6 +692,8 @@ big {
   @media (min-width: 1200px) {
     .page-template-portfolio .container {
       width: 1500px; } }
+  .page-template-portfolio #secondary {
+    margin-top: 29rem; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -707,6 +843,16 @@ a {
 #site-navigation {
   display: none; }
 
+.nav-list {
+  padding: 3% 9.5%;
+  font-size: 27px;
+  transform: translateX(0px);
+  font-weight: 300;
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s linear; }
+  .nav-list li:hover {
+    font-weight: 400; }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -846,6 +992,62 @@ a {
 
 ul {
   list-style: none; }
+
+#secondary {
+  background: url("../../assets/contact-me-bg.png") no-repeat;
+  background-size: 100%;
+  padding-bottom: 35px; }
+
+.yellow-button {
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border: 2px solid #f7d231; }
+  .yellow-button:hover {
+    background: #fff;
+    text-decoration: none; }
+
+form {
+  width: 75%;
+  margin: 0 auto; }
+  form textarea {
+    height: 230px;
+    padding-top: 20px; }
+  form input {
+    height: 40px; }
+  form input, form textarea {
+    background: #fdf8d9;
+    width: 35vw;
+    padding-left: 25px;
+    font-size: 19px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #a2a197; }
+  form .wpcf7-submit {
+    box-shadow: none;
+    width: 145px;
+    margin-right: 15px;
+    /* text-align: center; */
+    padding: 0;
+    /* text-align: center; */
+    float: right; }
+
+.custom-html-widget {
+  padding-top: 25%; }
+
+.widget_title {
+  text-align: left; }
+
+.wpcf7 {
+  position: relative;
+  bottom: 40px; }
+
+.widget-title {
+  text-align: left;
+  position: relative;
+  top: 12vw;
+  font-size: 40px;
+  margin-left: 29.5%; }
 
 /*--------------------------------------------------------------
 # Media

@@ -135,3 +135,17 @@ a {
 #site-navigation{
 	display:none;
 }
+
+.nav-list{
+	padding: 3% 9.5%;
+	font-size: 27px;
+	transform: translateX(0px);
+	font-weight:300;
+	font-family:'Lato', sans-serif;
+	transition:all 0.3s linear;
+		li{
+			&:hover{
+				font-weight:400;
+			}
+		}
+}

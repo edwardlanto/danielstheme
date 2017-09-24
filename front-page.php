@@ -8,7 +8,7 @@ get_header() ?>
                 <div class="polygon2">
                         <ul class="nav-list container row pull-right">
                             <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
-                            <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">My Work</a></li>
+                            <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
                             <li class="nav-item col-sm-3"><a href="#clients">Clients</a></li>
                             <li class="nav-item col-sm-3"><a href="#contact">Contact Me</a></li>
                         </ul>
@@ -28,7 +28,7 @@ echo get_template_directory_uri(); ?>/assets/flap.png" alt="" class="flap">
                     <li>
                         <img src="<?php
 echo get_template_directory_uri(); ?>/assets/web.png" alt="">
-                        <p>Web</p>
+                        <p>UI/UX</p>
                     </li>
                     <li>
                         <img src="<?php
@@ -76,7 +76,7 @@ if ($loop->have_posts()):
 	while ($loop->have_posts()):
 		$loop->the_post(); ?>
                              
-                            <li class="portfolio-picture" filter="1" data-sort="value"> d
+                            <li class="portfolio-picture" filter="1" data-sort="value">
                                 <?php
 		the_post_thumbnail(); ?>
                             </li>

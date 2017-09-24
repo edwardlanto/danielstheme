@@ -1,12 +1,32 @@
 .page-template-portfolio{
 
+    h1{
+        font-size:50px;
+    }
+
+    .nav-list{
+        margin-bottom:250px;
+    }
+
+    .space-out{
+        width:auto;
+    }
+
+    .bold-item{
+        font-weight:bold;
+    }
+
     .shuffle-nav-wrapper{
         background:$main_color;
         display: flex;
         align-items: center;
         height:50px;
-        font-size:20px;
+        font-size:30px;
+        margin-bottom:36px;
+    }
 
+    .wp-post-image{
+        border-radius:15px;
     }
 
     .item{
@@ -31,6 +51,14 @@
 
     .filtr-item{
         padding:0 1%;
+    }
+
+    .button-active{
+        font-weight:bold;
+    }
+
+    .button-inactive{
+        font-weight:100;
     }
 
     //Filterizr
@@ -64,6 +92,10 @@
         .container {
         width: 1500px;
         }
+    }
+
+    #secondary{
+        margin-top:29rem;
     }
 
     

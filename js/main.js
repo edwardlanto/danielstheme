@@ -3,6 +3,17 @@
     $('.first-shuffle').click();
     $('.filtr-container').filterizr();
 
+    $('.space-out').on('click', function(){
+        $(this).addClass('button-active');
+        $(this).siblings().removeClass('button-active');
+
+    })
+
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
+
     // var options = {
     //        animationDuration: 0.5, //in seconds
     //        filter: 'all', //Initial filter
