@@ -13,7 +13,7 @@ body.lb-disable-scrolling {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: rgba(0,0,0,.2);
+  background-color: transparent;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: none;
@@ -216,15 +216,19 @@ body.lb-disable-scrolling {
   width: 47vw !important;
   height: 130vw !important;
   margin-top:30%;
-  border-radius:15px !important;
+  border-radius:25px !important;
 }
 
 .lb-outerContainer{
   width:47vw !important;
   height:100vw !important;
-  border-radius:15px !important;
+  border-radius:25px !important;
 }
 
 #lightbox{
   top:4rem !important;
+}
+
+.filtr-item{
+  transition: all 0.6s ease-in-out !important;
 }
