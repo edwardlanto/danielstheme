@@ -35,7 +35,7 @@ $loop = new WP_Query(array(
 if ($loop->have_posts()):
 	while ($loop->have_posts()):
 		$loop->the_post(); ?>
-                            <a href="<?php echo the_post_thumbnail_url() ?>" data-lightbox="test1" data-title="My caption">
+                            <a href="<?php echo the_post_thumbnail_url() ?>" data-lightbox="test1" data-title="My caption<br/>">
                             <div class="filtr-item col-sm-3" data-category="<?php echo CFS()->get('category'); ?>" data-sort="value">
                                 <?php
 		the_post_thumbnail(); ?>

@@ -13,7 +13,7 @@ body.lb-disable-scrolling {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: black;
+  background-color: rgba(0,0,0,.2);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   display: none;
@@ -210,4 +210,21 @@ body.lb-disable-scrolling {
   cursor: pointer;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
+}
+
+.lb-image{
+  width: 47vw !important;
+  height: 130vw !important;
+  margin-top:30%;
+  border-radius:15px !important;
+}
+
+.lb-outerContainer{
+  width:47vw !important;
+  height:100vw !important;
+  border-radius:15px !important;
+}
+
+#lightbox{
+  top:4rem !important;
 }

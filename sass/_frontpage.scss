@@ -22,11 +22,13 @@
         display: inline-block;
         left: 30vw;
         position: relative;
-        top: 50%;
+        top: 51%;
 
         h2 {
             margin-top: 32px;
-            font-size:42px;
+            font-family:'Rockwell';
+            font-weight:900;
+            font-size:45px;
 
         }
         p{
@@ -45,11 +47,6 @@
 
     //About Me Section
 
-    .about-header, .portfolio-header, .clients-header {
-        font-size: 39px;
-        margin-left: 30.7%;
-
-    }
 
     .about-me-section {
         position: relative;
@@ -62,6 +59,10 @@
         height: 40px;
         position: relative;
         z-index: 1;
+        font-size: 39px;
+        margin-left: 30.7%;
+        font-family:'Rockwell';
+
     }
 
     .about-header:before, .portfolio-header:before, .clients-header:before {
@@ -145,7 +146,7 @@
     }
 
     .learn-more-container {
-        transform: translate(70%,-190%);
+        transform: translate(69%,-375%);        
 
         p {
             color: $main_font_color;

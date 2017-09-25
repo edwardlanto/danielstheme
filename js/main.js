@@ -11,7 +11,8 @@
 
     lightbox.option({
         'resizeDuration': 200,
-        'wrapAround': true
+        'wrapAround': true,
+        'maxWidth':'700px'
       })
 
     // var options = {
