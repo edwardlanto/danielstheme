@@ -1054,9 +1054,15 @@ ul {
   list-style: none; }
 
 #secondary {
-  background: url("../../assets/contact-me-bg.png") no-repeat;
+  background: #f7d231;
   background-size: 100%;
+  position: relative;
   padding-bottom: 35px; }
+  #secondary img {
+    width: 39vw;
+    position: absolute;
+    left: 51%;
+    max-width: 790px; }
 
 .yellow-button {
   transition: all 0.3s linear;
@@ -1066,16 +1072,19 @@ ul {
     background: #fff;
     text-decoration: none; }
 
+input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+  background: #fff; }
+
 form {
   width: 75%;
   margin: 0 auto; }
   form textarea {
-    height: 229px;
+    height: 223px;
     padding-top: 20px; }
   form input {
     height: 40px; }
   form input, form textarea {
-    background: #fdf8d9;
+    background: #fff;
     width: 35vw;
     padding-left: 25px;
     font-size: 17px;

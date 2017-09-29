@@ -53,9 +53,16 @@ ul{
 }
 
 #secondary {
-	background: url("../../assets/contact-me-bg.png") no-repeat;
+	background: $main_color;
 	background-size: 100%;
+	position:relative;
 	padding-bottom:35px;
+		img{
+			width: 39vw;
+			position: absolute;
+			left: 51%;
+			max-width: 790px;
+		}
 }
 
 .yellow-button{
@@ -68,6 +75,10 @@ ul{
 		}
 }
 
+input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
+	background:#fff;
+}
+
 
 
 form {
@@ -75,7 +86,7 @@ form {
 	margin: 0 auto;
 
 	textarea {
-		height: 229px;
+		height: 223px;
 		padding-top:20px;
 	}
 
@@ -84,7 +95,7 @@ form {
 	}
 
 	input, textarea {
-		background: #fdf8d9;
+		background: #fff;
 		width: 35vw;
 		padding-left: 25px;
 		font-size: 17px;
