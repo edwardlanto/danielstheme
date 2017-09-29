@@ -15,14 +15,12 @@
     .space-out{
         width:auto;
         cursor:pointer;
-        font-weight:100;
-            &:hover{
-                font-weight:900;
-            }
+        font-size:25px;
+        @include main-font;
     }
 
     .bold-item{
-        font-weight:bold;
+        font-weight:700;
     }
 
     .shuffle-nav-wrapper{
@@ -123,10 +121,12 @@
     .caption1{
         font-size:28px;
         margin-bottom:0;
+        font-weight:300;
     }
 
     .caption2{
         font-size:21px;
+        font-weight:300;
     }
 
     input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{

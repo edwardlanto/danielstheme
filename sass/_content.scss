@@ -91,7 +91,7 @@ form {
 		font-family: 'Lato', sans-serif;
 		font-weight:300;
 		letter-spacing:0.5px;
-		color: #a2a197;
+		color: #666;
 	}
 
 	.wpcf7-submit {
@@ -100,6 +100,7 @@ form {
 		background:#fff;
 		font-size:17px;
 		margin-right:30px;
+		border:none;
 
 		/* text-align: center; */
 		padding: 0;
@@ -126,7 +127,7 @@ form {
 .widget-title:before{
 	content: "";
 	position: absolute;
-	left: 2px;
+	left: 4px;
 	bottom: -20px;        
 	width: 34%;
 	border-bottom: 5px solid #000;
@@ -141,6 +142,7 @@ form {
 	font-size: 39px;
 	margin-left: 30.7%;
 	font-family:'Rockwell';
+	color:#000;
 }
 
 .hidden{

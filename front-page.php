@@ -98,18 +98,25 @@ wp_reset_postdata();
                 </section>
                 <section class="client-section" id="clients">
                 <h2 class="clients-header">Clients</h2>
-                    <ul class="container row clients-list">
-                        <li class="col-sm-offset-2 col-sm-2"><img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
-                        <li class="col-sm-2"><img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
-                        <li class="col-sm-2"><img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
-                        <li class="col-sm-2"><img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
-                        <li class="col-sm-2"><img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt=""></li>
-                    </ul>  
+                <ul class="main-carousel container-fluid">
+                <?php
+                    $clients = new WP_Query(array(
+                    'post_type' => 'clients'
+                    ));
+
+                    if ($clients->have_posts()):
+                    while ($clients->have_posts()):
+                    $clients->the_post(); ?>                                       
+                                        <li class="carousel-cell col-sm-4">
+                                            <?php
+                    the_post_thumbnail(); ?>
+                                        </li>                                            
+                                        <?php
+                    endwhile;
+                    endif;
+                    wp_reset_postdata();
+?>
+                </ul>
                 </section>
                 <?php
 get_sidebar(); ?>

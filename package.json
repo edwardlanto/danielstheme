@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "filterizr": "^1.2.5",
+    "flickity": "^2.0.10",
     "lightbox": "^0.5.0",
     "lightbox2": "^2.9.0"
   },

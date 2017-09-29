@@ -634,6 +634,12 @@ big {
         align-items: flex-end; }
   .home .client-section {
     margin-bottom: 160px; }
+  .home .main-carousel {
+    margin-top: 150px; }
+  .home .carousel-cell {
+    text-align: center; }
+  .home .flickity-page-dots {
+    bottom: -100px; }
   .home .clients-list {
     margin: 0 auto;
     margin-top: 145px; }
@@ -669,11 +675,13 @@ big {
   .page-template-portfolio .space-out {
     width: auto;
     cursor: pointer;
-    font-weight: 100; }
+    font-size: 25px;
+    font-weight: 100;
+    font-family: 'Lato'; }
     .page-template-portfolio .space-out:hover {
-      font-weight: 900; }
+      font-weight: 700; }
   .page-template-portfolio .bold-item {
-    font-weight: bold; }
+    font-weight: 700; }
   .page-template-portfolio .shuffle-nav-wrapper {
     background: #f7d231;
     display: -ms-flexbox;
@@ -728,9 +736,11 @@ big {
     font-family: 'Lato', sans-serif; }
   .page-template-portfolio .caption1 {
     font-size: 28px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-weight: 300; }
   .page-template-portfolio .caption2 {
-    font-size: 21px; }
+    font-size: 21px;
+    font-weight: 300; }
   .page-template-portfolio input[type=email], .page-template-portfolio input[type=password], .page-template-portfolio input[type=search], .page-template-portfolio input[type=text], .page-template-portfolio input[type=url], .page-template-portfolio textarea {
     border: none; }
   .page-template-portfolio input[type=email], .page-template-portfolio input[type=password], .page-template-portfolio input[type=search], .page-template-portfolio input[type=text], .page-template-portfolio input[type=url], .page-template-portfolio textarea {
@@ -890,13 +900,18 @@ a {
 
 .nav-list {
   padding: 3% 9.5%;
-  font-size: 27px;
+  font-size: 25px;
   transform: translateX(0px);
-  font-weight: 300;
-  font-family: 'Lato', sans-serif;
   transition: all 0.3s linear; }
-  .nav-list li:hover {
-    font-weight: 400; }
+  .nav-list li {
+    font-weight: 100;
+    font-family: 'Lato'; }
+    .nav-list li a {
+      color: #000; }
+    .nav-list li:hover {
+      font-weight: 700; }
+    .nav-list li a:hover {
+      text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1067,13 +1082,14 @@ form {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     letter-spacing: 0.5px;
-    color: #a2a197; }
+    color: #666; }
   form .wpcf7-submit {
     box-shadow: none;
     width: 145px;
     background: #fff;
     font-size: 17px;
     margin-right: 30px;
+    border: none;
     /* text-align: center; */
     padding: 0;
     /* text-align: center; */
@@ -1093,7 +1109,7 @@ form {
 .widget-title:before {
   content: "";
   position: absolute;
-  left: 2px;
+  left: 4px;
   bottom: -20px;
   width: 34%;
   border-bottom: 5px solid #000; }
@@ -1106,7 +1122,8 @@ form {
   z-index: 1;
   font-size: 39px;
   margin-left: 30.7%;
-  font-family: 'Rockwell'; }
+  font-family: 'Rockwell';
+  color: #000; }
 
 .hidden {
   display: none; }

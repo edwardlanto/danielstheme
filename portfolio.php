@@ -7,10 +7,10 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
         <ul class="nav-list container row pull-right">
-            <li class="nav-item col-sm-2 col-sm-offset-3"><a href="#about">About Me</a></li>
+            <li class="nav-item col-sm-2 col-sm-offset-3"><a href="/">About Me</a></li>
             <li class="nav-item bold-item col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-            <li class="nav-item col-sm-2"><a href="#clients">Clients</a></li>
-            <li class="nav-item col-sm-2"><a href="#contact">Contact Me</a></li>
+            <li class="nav-item col-sm-2"><a href="/">Clients</a></li>
+            <li class="nav-item col-sm-2"><a href="/danielstheme">Contact Me</a></li>
         </ul>
         <div class="portfolio-header-container container"><h1>Portfolio</h1></div>
         <section class="portfolio-gallery">
