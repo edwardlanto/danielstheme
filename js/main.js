@@ -1,5 +1,7 @@
 (function($){
 
+    $('.flap').hover();
+
     $('.first-shuffle').click();
 
     // $('.carousel-cell:first-child').addClass('col-sm-offset-1');

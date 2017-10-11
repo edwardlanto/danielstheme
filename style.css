@@ -501,11 +501,6 @@ big {
     .home .name-container p {
       font-size: 18px;
       font-family: 'Lato', sans-serif; }
-  .home .flap {
-    width: 16%;
-    position: absolute;
-    top: 77.4%;
-    right: 54%; }
   .home .about-me-section {
     position: relative;
     padding-top: 24rem;
@@ -662,16 +657,18 @@ big {
   right: 10px;
   bottom: 10px; }
 
+.flap {
+  width: 16%;
+  position: absolute;
+  top: 77.4%;
+  right: 54%; }
+
 /* entire container, keeps perspective */
 .flip-container {
   perspective: 1000px; }
 
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateX(180deg); }
-
 .flip-container, .front, .back {
-  width: 320px;
   height: 480px; }
 
 /* flip speed goes here */
@@ -691,7 +688,6 @@ big {
 /* front pane, placed above back */
 .front {
   z-index: 2;
-  /* for firefox 31 */
   transform: rotateX(0deg); }
 
 /* back, initially hidden pane */
@@ -705,18 +701,14 @@ big {
   transform-origin: 100% 146.5px;
   /* half of height */ }
 
-.vertical.flip-container:hover .flipper {
-  transform: rotateX(180deg); }
+.flipper {
+  transform: rotateX(-180deg); }
+
+.flip-container:hover .flipper {
+  transform: rotateX(0deg); }
 
 .back img {
   transform: rotate(-43deg); }
-
-.test {
-  height: 200px;
-  width: 200px; }
-
-.test1 {
-  background-color: red; }
 
 .page-template-portfolio {
   /*  #Mobile (Portrait) - Note: Design for a width of 320px */
@@ -1154,7 +1146,7 @@ form {
     width: 145px;
     background: #fff;
     font-size: 17px;
-    margin-right: 2.3%;
+    margin-right: 1.9%;
     border: none;
     /* text-align: center; */
     padding: 0;

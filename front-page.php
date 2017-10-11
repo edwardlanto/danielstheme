@@ -6,7 +6,7 @@ get_header() ?>
 		<main id="main" class="site-main" role="main">
             <div class="polygon-wrapper">
                 <div class="polygon2">
-                    <div class="logo">Logo</div>
+                    <!-- <div class="logo">Logo</div> -->
                         <ul class="nav-list container row pull-right">
                             <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
                             <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
