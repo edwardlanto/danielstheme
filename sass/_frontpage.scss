@@ -13,9 +13,10 @@
 
     .hero-icon {
         position: absolute;
-        left: 55%;
-        top: 9.2vw;
+        left: 50%;
+        top: 6.6vw;
         height: 40vw;
+        width: 50%;
     }
 
     .name-container {
@@ -40,9 +41,11 @@
     .flap {
         width: 16%;
         position: absolute;
-        top: 87.3%;
-        right: 53.4%;
-        transform: rotate(-1deg)
+        top: 77.4%;
+        right: 54%;
+
+
+    
     }
 
     //About Me Section
@@ -72,47 +75,6 @@
         bottom: -20px;        
         width: 34%;
         border-bottom: 5px solid #000;
-    }
-
-    //Folding Paper Animation
-
-    #container1 {
-        width: 400px;
-        height: 400px;
-        position: absolute;
-        top: 91%;
-        right: 44.5%;
-    }
-
-    .parent1 {
-        /* overall animation container */
-        height: 270px;
-        overflow: hidden;
-        transition-property: height;
-        transition-duration: 1s;
-        perspective: 1000px;
-        transform-style: preserve-3d;
-    }
-
-    .parent2 {
-        /* full content during animation *can* go here */
-    }
-
-    .parent3 {
-        /* animated, "folded" block */
-        height: 56px;
-        transition-property: all;
-        transition-duration: 1s;
-        transform: rotateX(-90deg);
-        transform-origin: top;
-    }
-
-    /* Hover states to trigger animations */
-    #container1:hover .parent1 {}
-
-    #container1:hover .parent3 {
-        transform: rotateX(0deg);
-        height: 270px;
     }
 
     .resume {
@@ -240,15 +202,60 @@
 
     .main-carousel{
         margin-top:150px;
+        padding-left:0;
     }
 
     .carousel-cell{
         text-align:center;
+        img{
+            height: 30%;
+            width: 63%;
+        }
     }
 
-    .flickity-page-dots{
-        bottom:-100px;
+    .col-xs-5ths,
+    .col-sm-5ths,
+    .col-md-5ths,
+    .col-lg-5ths {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
+    
+    .col-xs-5ths {
+        width: 20%;
+        float: left;
+    }
+    
+    @media (min-width: 768px) {
+        .col-sm-5ths {
+            width: 20%;
+            float: left;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .col-md-5ths {
+            width: 20%;
+            float: left;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .col-lg-5ths {
+            width: 20%;
+            float: left;
+        }
+    }
+
+    // .carousel-cell{
+    //     text-align:center;
+    // }
+
+    // .flickity-page-dots{
+    //     bottom:-100px;
+    // }
 
     // .carousel-cell {
     //     width: 50%; /* half-width */
@@ -258,10 +265,10 @@
 
         
 
-    // .clients-header {
-    //     margin-left: 28.7%;
-    //     font-size:39px;
-    // }
+    .clients-header {
+        margin-left: 28.7%;
+        font-size:39px;
+    }
 
     .clients-list {
         margin:0 auto;
@@ -295,4 +302,84 @@
     bottom: 10px;
 }
 
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    // transition:all 1s linear;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateX(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateX(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateX(180deg);
+}
+
+// .vertical.flip-container {
+// 	position: relative;
+// }
+
+	.vertical .back {
+		transform: rotateX(180deg);
+	}
+
+	.vertical.flip-container .flipper {
+		transform-origin: 100% 146.5px; /* half of height */
+	}
+
+	.vertical.flip-container:hover .flipper {
+        transform: rotateX(180deg);
+    }
+    
+    .back{
+        img{
+            transform: rotate(-43deg);
+        }
+    }
+
+    // .flip-container:hover{
+    //     top: 63.4%;
+    //     right: 54.5%;
+    // }
+
 //Polygon Shape
+
+
+.test{
+    height:200px;
+    width:200px;
+}
+
+.test1{
+    background-color:red;
+}

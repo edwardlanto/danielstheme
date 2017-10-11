@@ -93,7 +93,7 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'daniels-filter', get_template_directory_uri() . '/build/js/lightbox.min.js', array('jquery'), true);
 	
-	wp_enqueue_script( 'daniels-filter2', get_template_directory_uri() . '/build/js/jquery.filterizr.min.min.js', array('jquery'), true);
+	wp_enqueue_script( 'daniels-filter2', get_template_directory_uri() . '/build/js/jquery.filterizr.min.js', array('jquery'), true);
 
 
 	

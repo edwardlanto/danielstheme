@@ -11,6 +11,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <div id="secondary" class="contact-form widget-area" role="complementary">
-	<img src="<?php echo get_template_directory_uri(); ?>/assets/get-in-touch.png" alt="Get in touch icon" class="get-in-touch-icon" >
+	<img src="<?php echo get_template_directory_uri(); ?>/assets/contact-logo.png" alt="Get in touch icon" class="get-in-touch-icon" >
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary -->
