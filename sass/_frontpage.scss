@@ -38,7 +38,13 @@
         }
     }
 
-
+    .flap {
+        width: 16%;
+        position: absolute;
+        top: 88.1%;
+        right: 53.5%;    
+    
+    }
 
     //About Me Section
 
@@ -100,7 +106,7 @@
     }
 
     .learn-more-container {
-        transform: translate(69%,-375%);        
+        transform: translate(69%,-17vw);     
 
         p {
             color: $main_font_color;
@@ -241,6 +247,10 @@
         }
     }
 
+    .flickity-viewport{
+        height:200px !important;
+    }
+
     // .carousel-cell{
     //     text-align:center;
     // }
@@ -295,22 +305,18 @@
 }
 
 
-.flap {
-    width: 16%;
-    position: absolute;
-    top: 77.4%;
-    right: 54%; 
-}
-
-
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;
     // transition:all 1s linear;
 }
 	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateX(180deg);
+	}
 
 .flip-container, .front, .back {
+	width: 320px;
 	height: 480px;
 }
 
@@ -332,6 +338,7 @@
 /* front pane, placed above back */
 .front {
 	z-index: 2;
+	/* for firefox 31 */
 	transform: rotateX(0deg);
 }
 
@@ -339,23 +346,21 @@
 .back {
 	transform: rotateX(180deg);
 }
-    
+
+// .vertical.flip-container {
+// 	position: relative;
+// }
 
 	.vertical .back {
 		transform: rotateX(180deg);
 	}
 
 	.vertical.flip-container .flipper {
-		transform-origin: 100% 146.5px; /* half of height */
-    }
-    
+		transform-origin: 100% 193.5px; /* half of height */
+	}
 
-	.flipper {
-        transform: rotateX(-180deg);
-    }
-
-    .flip-container:hover .flipper{
-        transform: rotateX(0deg);
+	.vertical.flip-container:hover .flipper {
+        transform: rotateX(180deg);
     }
     
     .back{
@@ -364,9 +369,14 @@
         }
     }
 
-    .flip-container:hover{
-        // z-index: -1;
-    }
+    // .flip-container:hover{
+    //     top: 63.4%;
+    //     right: 54.5%;
+    // }
 
 //Polygon Shape
 
+
+.flap-front{
+    height:250px;
+}

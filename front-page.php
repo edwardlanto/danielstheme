@@ -7,28 +7,30 @@ get_header() ?>
             <div class="polygon-wrapper">
                 <div class="polygon2">
                     <!-- <div class="logo">Logo</div> -->
-                        <ul class="nav-list container row pull-right">
-                            <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
-                            <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-                            <li class="nav-item col-sm-3"><a href="#clients">Clients</a></li>
-                            <li class="nav-item col-sm-3"><a href="#contact">Contact Me</a></li>
-                        </ul>
+                    <ul class="nav-list container row pull-right">
+                        <li class="nav-item col-sm-3"><a href="#about">About Me</a></li>
+                        <li class="nav-item col-sm-3"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
+                        <li class="nav-item col-sm-3"><a href="#clients">Clients</a></li>
+                        <li class="nav-item col-sm-3"><a href="#contact">Contact Me</a></li>
+                    </ul>
                     <div class="name-container">
                         <h2>Daniel Valdes</h2>
                         <p>Graphic Design and Illustrator</p>
                     </div><!--name-container-->
                     <img src="<?php
 echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" alt="">
-                            <div class="flip-container vertical flap" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flipper">
-                                <div class="front">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
-                                </div>
-                                <div class="back">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
-                                </div>
-                            </div>
-                        </div><!--flipper-container-->
+            
+                                <div class="flip-container vertical flap" ontouchstart="this.classList.toggle('hover');">
+                                    <div class="flipper">
+                                        <div class="front">
+                                            <img class="flap-front" src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
+                                        </div>
+                                    <div class="back">
+                                        <img class="flap-front" src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
+                                    </div>
+                                </div><!--flipper-->
+                            </div><!--flipper-container-->
+    
                 </div><!--polygon2-->
             </div><!--polygonwrapper"-->
             <section class="about-me-section" id="about">
@@ -114,7 +116,7 @@ wp_reset_postdata();
                 if ($clients->have_posts()):
                 while ($clients->have_posts()):
                 $clients->the_post(); ?>                                       
-                                    <li class="carousel-cell">
+                                    <li class="carousel-cell col-md-5ths col-xs-6">
                                         <?php
                 the_post_thumbnail(); ?>
                                     </li>                                            
