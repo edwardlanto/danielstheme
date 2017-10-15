@@ -20,7 +20,7 @@ get_header() ?>
                     <img src="<?php
 echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" alt="">
                             <div class="main-flap-wrapper">
-                                <div class="flip-container vertical flap" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flip-container vertical flap">
                                     <div class="flipper">
                                         <div class="front">
                                             <img class="flap-front" src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
@@ -66,11 +66,11 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 <div class="resume-container container">
                     <div class="resume1 resume col-sm-4">
                         <p>Award winning visual artist and graphic  designer with experience in editorial  designing</p>
-                        <a href="#" class="yellow-button">Download Resume</a>
+                        <a href="<?php echo CFS()->get( 'resume_english' ); ?>" class="yellow-button">Download Resume</a>
                     </div><!--resume1-->
                     <div class="resume2 resume col-sm-5">
                         <p>Award winning and graphic designer  with experiecne in editorial  design, branding, t, oil painting.</p>
-                        <a href="#" class="yellow-button">Descargar Curriculum</a>
+                        <a href="#" class="yellow-button">Descargar Currículum</a>
                     </div> 
                 </div><!--resume-container-->
             </section><!--about-me-section-->
@@ -79,24 +79,24 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 <div class="portfolio-container">
                     <h2 class="portfolio-header">Portfolio</h2> 
                     <ul id="portfolio-list" class="filtr-container">
-                    <?php
-$loop = new WP_Query(array(
-'post_type' => 'pictures'
-));
-if ($loop->have_posts()):
-while ($loop->have_posts()):
-    $loop->the_post(); ?>
-                         
-                        <li class="portfolio-picture" filter="1" data-sort="value">
-                            <?php
-    the_post_thumbnail(); ?>
-                        </li>
-                            
                         <?php
-endwhile;
-endif;
-wp_reset_postdata();
-?>
+    $loop = new WP_Query(array(
+    'post_type' => 'pictures'
+    ));
+    if ($loop->have_posts()):
+    while ($loop->have_posts()):
+        $loop->the_post(); ?>
+                            
+                            <li class="portfolio-picture" filter="1" data-sort="value">
+                                <?php
+        the_post_thumbnail(); ?>
+                            </li>
+                                
+                            <?php
+    endwhile;
+    endif;
+    wp_reset_postdata();
+    ?>
                     </ul>
                     <div class="learn-more-container">
                         <p>Award winning visual artist and 

@@ -24,19 +24,20 @@
         left: 30vw;
         position: relative;
         top: 51%;
+        z-index: 10;
 
         h2 {
             margin-top: 32px;
-            font-family:'Rockwell';
-            font-weight:900;
-            font-size:45px;
-            color:#000;
-
+            font-family: 'Rockwell';
+            font-weight: 900;
+            font-size: 45px;
+            color: #000;
         }
-        p{
+
+        p {
             font-size: 18px;
-            font-family:'Lato', sans-serif;
-            color:#000;
+            font-family: 'Lato', sans-serif;
+            color: #000;
         }
     }
 
@@ -44,12 +45,10 @@
         width: 16%;
         position: absolute;
         top: 88.1%;
-        right: 53.5%;    
-    
+        right: 53.5%;
     }
 
     //About Me Section
-
 
     .about-me-section {
         position: relative;
@@ -64,16 +63,15 @@
         z-index: 1;
         font-size: 39px;
         margin-left: 30.7%;
-        font-family:'Rockwell';
-        color:#000;
-
+        font-family: 'Rockwell';
+        color: #000;
     }
 
     .about-header:before, .portfolio-header:before, .clients-header:before {
         content: "";
         position: absolute;
         left: 0;
-        bottom: -20px;        
+        bottom: -20px;
         width: 34%;
         border-bottom: 5px solid #000;
     }
@@ -84,15 +82,15 @@
             font-size: 19px;
             font-family: 'Lato',sans-serif;
             max-width: 350px;
-            font-weight:300;
-            margin-bottom:36px;
+            font-weight: 300;
+            margin-bottom: 36px;
         }
 
         a {
             background: $main_color;
             color: #000;
-            font-size:17px;
-            font-family:'Lato', sans-serif;
+            font-size: 17px;
+            font-family: 'Lato', sans-serif;
             padding: 7px 20px;
         }
     }
@@ -104,20 +102,22 @@
     }
 
     .portfolio-container {
-        transform: translate(-76px,190px);        
+        transform: translate(-76px, 190px);
         position: relative;
     }
 
     .learn-more-container {
-        transform: translate(69%,-17vw);     
+        position: relative;
+        left: 69%;
+        bottom: 32vw;
 
         p {
             color: $main_font_color;
             max-width: 265px;
-            font-weight:'Lato', sans-serif;
-            margin-bottom:36px;
-            font-size:18px;
-            font-weight:300;
+            font-weight: 'Lato', sans-serif;
+            margin-bottom: 36px;
+            font-size: 18px;
+            font-weight: 300;
         }
 
         a {
@@ -125,32 +125,29 @@
             color: #000;
             padding: 9px 29px;
             font-size: 15px;
-            font-family:'Lato', sans-serif;
-        
-        
-        
+            font-family: 'Lato', sans-serif;
         }
     }
 
     .portfolio-hero {
-        background:url('../../assets/Portfolio-cutout.png')no-repeat center;
-        background-size: 100vw 633px;
-        height: 612px;
+        background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
+        background-size: 100vw 57vw;
+        height: 900px;
     }
 
     .portfolio-header {
         margin-left: 34.5%;
+        top: 17vw;
     }
 
     #portfolio-list {
-        margin: 73px auto;
-        position: relative;
+        margin: 22vw auto;
         width: 31%;
         height: 42vw;
         padding: 10px;
-        box-shadow: 0 0 20px rgba(0,0,0,.4);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         overflow: hidden;
-        margin-left: 34.5%;    
+        margin-left: 34.5%;
 
         .portfolio-picture {
             position: absolute;
@@ -180,8 +177,8 @@
                 width: 30%;
             }
 
-            p{
-                color:#909090;
+            p {
+                color: #909090;
                 font-size: 21px;
                 margin-top: 24px;
             }
@@ -197,20 +194,21 @@
 
     //Client Section
 
-    .client-section{
-        margin-bottom:160px;
+    .client-section {
+        margin-bottom: 160px;
     }
 
-    .main-carousel{
-        margin-top:150px;
-        padding-left:0;
+    .main-carousel {
+        margin-top: 150px;
+        padding-left: 0;
         padding: 0 61px;
     }
 
-    .carousel-cell{
-        text-align:center;
+    .carousel-cell {
+        text-align: center;
         padding: 53px;
-        img{
+
+        img {
             height: 30%;
             width: 63%;
         }
@@ -225,26 +223,26 @@
         padding-right: 15px;
         padding-left: 15px;
     }
-    
+
     .col-xs-5ths {
         width: 20%;
         float: left;
     }
-    
+
     @media (min-width: 768px) {
         .col-sm-5ths {
             width: 20%;
             float: left;
         }
     }
-    
+
     @media (min-width: 992px) {
         .col-md-5ths {
             width: 20%;
             float: left;
         }
     }
-    
+
     @media (min-width: 1200px) {
         .col-lg-5ths {
             width: 20%;
@@ -252,34 +250,32 @@
         }
     }
 
-    .flickity-viewport{
-        height:200px !important;
+    .flickity-viewport {
+        height: 200px !important;
     }
-
-        
 
     .clients-header {
         margin-left: 28.7%;
-        font-size:39px;
-        &:before{
-            left:3px;
+        font-size: 39px;
+
+        &:before {
+            left: 3px;
         }
     }
 
     .clients-list {
-        margin:0 auto;
+        margin: 0 auto;
         margin-top: 145px;
     }
 
-    .flickity-prev-next-button{
-        border:none;
-        box-shadow:none;
+    .flickity-prev-next-button {
+        border: none;
+        box-shadow: none;
     }
 
     //Contact Section
-
-
 }
+
 //Home Wrapper
 
 #slideshow {
@@ -299,16 +295,17 @@
     bottom: 10px;
 }
 
-
 // /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;
+
     // transition:all 1s linear;
 }
+
 // 	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateX(180deg);
-	}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateX(180deg);
+}
 
 // .flip-container, .front, .back {
 // 	width: 320px;
@@ -317,60 +314,64 @@
 
 // /* flip speed goes here */
 .flipper {
-	transition: 1s;
-	transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
 }
 
 // /* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.main-flap-wrapper{
+.main-flap-wrapper {
     position: absolute;
     width: 100%;
     top: 48.9vw;
     right: 5px;
 }
+
 // /* front pane, placed above back */
 .front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateX(0deg);
+    z-index: 2;
+
+    /* for firefox 31 */
+    transform: rotateX(0deg);
 }
 
 // /* back, initially hidden pane */
 .back {
-	transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
-	.vertical .back {
-		transform: rotateX(180deg);
-	}
+.vertical .back {
+    transform: rotateX(180deg);
+}
 
-	.vertical.flip-container .flipper {
-		transform-origin: 100% 4.5vw; /* half of height */
-	}
+.vertical.flip-container .flipper {
+    transform-origin: 100% 4.5vw;
 
-	.vertical.flip-container:hover .flipper {
-        transform: rotateX(180deg);
-    }
-    
-//     .back{
-//         img{
-//             transform: rotate(-43deg);
-//         }
-//     }
-// //Polygon Shape
+    /* half of height */
+}
 
+// .vertical.flip-container:active .flipper {
+//     transform: rotateX(0deg);
+// }
 
-    .flap-front, .flap-back{
-        width:100%;
-    }
+// .hover {
+//     transform: rotateX(0deg);
+// }
 
-    .flap-back{
-        transform:rotate(180deg);
-    }
+.flipper {
+    transform: rotateX(180deg);
+}
+
+.flap-front, .flap-back {
+    width: 100%;
+}
+
+.flap-back {
+    transform: rotate(180deg);
+}

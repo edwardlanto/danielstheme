@@ -492,7 +492,8 @@ big {
     display: inline-block;
     left: 30vw;
     position: relative;
-    top: 51%; }
+    top: 51%;
+    z-index: 10; }
     .home .name-container h2 {
       margin-top: 32px;
       font-family: 'Rockwell';
@@ -549,7 +550,9 @@ big {
     transform: translate(-76px, 190px);
     position: relative; }
   .home .learn-more-container {
-    transform: translate(69%, -17vw); }
+    position: relative;
+    left: 69%;
+    bottom: 32vw; }
     .home .learn-more-container p {
       color: #d7d6d5;
       max-width: 265px;
@@ -564,14 +567,14 @@ big {
       font-size: 15px;
       font-family: 'Lato', sans-serif; }
   .home .portfolio-hero {
-    background: url("../../assets/Portfolio-cutout.png") no-repeat center;
-    background-size: 100vw 633px;
-    height: 612px; }
+    background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
+    background-size: 100vw 57vw;
+    height: 900px; }
   .home .portfolio-header {
-    margin-left: 34.5%; }
+    margin-left: 34.5%;
+    top: 17vw; }
   .home #portfolio-list {
-    margin: 73px auto;
-    position: relative;
+    margin: 22vw auto;
     width: 31%;
     height: 42vw;
     padding: 10px;
@@ -710,7 +713,7 @@ big {
   transform-origin: 100% 4.5vw;
   /* half of height */ }
 
-.vertical.flip-container:hover .flipper {
+.flipper {
   transform: rotateX(180deg); }
 
 .flap-front, .flap-back {
@@ -1156,7 +1159,6 @@ form {
     width: 145px;
     background: #fff;
     font-size: 17px;
-    margin-right: 25px;
     border: none;
     /* text-align: center; */
     padding: 0;
@@ -1209,12 +1211,13 @@ input {
 textarea {
   resize: none; }
 
-.logo {
-  position: absolute;
-  margin: 3% 9.5%;
-  width: 300px;
-  background: red;
-  height: 150px; }
+.label-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: end;
+      align-items: flex-end; }
 
 /*--------------------------------------------------------------
 # Media
