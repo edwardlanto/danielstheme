@@ -497,10 +497,12 @@ big {
       margin-top: 32px;
       font-family: 'Rockwell';
       font-weight: 900;
-      font-size: 45px; }
+      font-size: 45px;
+      color: #000; }
     .home .name-container p {
       font-size: 18px;
-      font-family: 'Lato', sans-serif; }
+      font-family: 'Lato', sans-serif;
+      color: #000; }
   .home .flap {
     width: 16%;
     position: absolute;
@@ -517,7 +519,8 @@ big {
     z-index: 1;
     font-size: 39px;
     margin-left: 30.7%;
-    font-family: 'Rockwell'; }
+    font-family: 'Rockwell';
+    color: #000; }
   .home .about-header:before, .home .portfolio-header:before, .home .clients-header:before {
     content: "";
     position: absolute;
@@ -561,7 +564,7 @@ big {
       font-size: 15px;
       font-family: 'Lato', sans-serif; }
   .home .portfolio-hero {
-    background: url("../../assets/portfolio-cutout2.png") no-repeat center;
+    background: url("../../assets/Portfolio-cutout.png") no-repeat center;
     background-size: 100vw 633px;
     height: 612px; }
   .home .portfolio-header {
@@ -609,9 +612,11 @@ big {
     margin-bottom: 160px; }
   .home .main-carousel {
     margin-top: 150px;
-    padding-left: 0; }
+    padding-left: 0;
+    padding: 0 61px; }
   .home .carousel-cell {
-    text-align: center; }
+    text-align: center;
+    padding: 53px; }
     .home .carousel-cell img {
       height: 30%;
       width: 63%; }
@@ -643,11 +648,14 @@ big {
   .home .clients-header {
     margin-left: 28.7%;
     font-size: 39px; }
+    .home .clients-header:before {
+      left: 3px; }
   .home .clients-list {
     margin: 0 auto;
     margin-top: 145px; }
-  .home .widget {
-    margin: 0 0 0 0 !important; }
+  .home .flickity-prev-next-button {
+    border: none;
+    box-shadow: none; }
 
 #slideshow {
   margin: 50px auto;
@@ -664,25 +672,16 @@ big {
   right: 10px;
   bottom: 10px; }
 
-/* entire container, keeps perspective */
 .flip-container {
   perspective: 1000px; }
 
-/* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
   transform: rotateX(180deg); }
 
-.flip-container, .front, .back {
-  width: 320px;
-  height: 480px; }
-
-/* flip speed goes here */
 .flipper {
   transition: 1s;
-  transform-style: preserve-3d;
-  position: relative; }
+  transform-style: preserve-3d; }
 
-/* hide back of pane during swap */
 .front, .back {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -690,13 +689,17 @@ big {
   top: 0;
   left: 0; }
 
-/* front pane, placed above back */
+.main-flap-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 48.9vw;
+  right: 5px; }
+
 .front {
   z-index: 2;
   /* for firefox 31 */
   transform: rotateX(0deg); }
 
-/* back, initially hidden pane */
 .back {
   transform: rotateX(180deg); }
 
@@ -704,17 +707,17 @@ big {
   transform: rotateX(180deg); }
 
 .vertical.flip-container .flipper {
-  transform-origin: 100% 193.5px;
+  transform-origin: 100% 4.5vw;
   /* half of height */ }
 
 .vertical.flip-container:hover .flipper {
   transform: rotateX(180deg); }
 
-.back img {
-  transform: rotate(-43deg); }
+.flap-front, .flap-back {
+  width: 100%; }
 
-.flap-front {
-  height: 250px; }
+.flap-back {
+  transform: rotate(180deg); }
 
 .page-template-portfolio {
   /*  #Mobile (Portrait) - Note: Design for a width of 320px */
@@ -731,6 +734,7 @@ big {
     width: auto;
     cursor: pointer;
     font-size: 25px;
+    padding: 0 25px;
     font-weight: 100;
     font-family: 'Lato'; }
     .page-template-portfolio .space-out:hover {
@@ -952,7 +956,7 @@ a {
   display: none; }
 
 .nav-list {
-  padding: 3% 0;
+  padding: 3% 80px;
   font-size: 25px;
   transition: all 0.3s linear; }
   .nav-list li {

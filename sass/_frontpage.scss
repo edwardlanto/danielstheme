@@ -30,11 +30,13 @@
             font-family:'Rockwell';
             font-weight:900;
             font-size:45px;
+            color:#000;
 
         }
         p{
             font-size: 18px;
             font-family:'Lato', sans-serif;
+            color:#000;
         }
     }
 
@@ -63,6 +65,7 @@
         font-size: 39px;
         margin-left: 30.7%;
         font-family:'Rockwell';
+        color:#000;
 
     }
 
@@ -130,7 +133,7 @@
     }
 
     .portfolio-hero {
-        background:url('../../assets/portfolio-cutout2.png')no-repeat center;
+        background:url('../../assets/Portfolio-cutout.png')no-repeat center;
         background-size: 100vw 633px;
         height: 612px;
     }
@@ -201,10 +204,12 @@
     .main-carousel{
         margin-top:150px;
         padding-left:0;
+        padding: 0 61px;
     }
 
     .carousel-cell{
         text-align:center;
+        padding: 53px;
         img{
             height: 30%;
             width: 63%;
@@ -251,25 +256,14 @@
         height:200px !important;
     }
 
-    // .carousel-cell{
-    //     text-align:center;
-    // }
-
-    // .flickity-page-dots{
-    //     bottom:-100px;
-    // }
-
-    // .carousel-cell {
-    //     width: 50%; /* half-width */
-    //     height: 160px;
-    //     margin-right: 10px;
-    //   }
-
         
 
     .clients-header {
         margin-left: 28.7%;
         font-size:39px;
+        &:before{
+            left:3px;
+        }
     }
 
     .clients-list {
@@ -277,8 +271,9 @@
         margin-top: 145px;
     }
 
-    .widget {
-        margin: 0 0 0 0 !important;
+    .flickity-prev-next-button{
+        border:none;
+        box-shadow:none;
     }
 
     //Contact Section
@@ -305,29 +300,28 @@
 }
 
 
-/* entire container, keeps perspective */
+// /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;
     // transition:all 1s linear;
 }
-	/* flip the pane when hovered */
+// 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
 		transform: rotateX(180deg);
 	}
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
-}
+// .flip-container, .front, .back {
+// 	width: 320px;
+// 	height: 480px;
+// }
 
-/* flip speed goes here */
+// /* flip speed goes here */
 .flipper {
 	transition: 1s;
 	transform-style: preserve-3d;
-	position: relative;
 }
 
-/* hide back of pane during swap */
+// /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
 	position: absolute;
@@ -335,48 +329,48 @@
 	left: 0;
 }
 
-/* front pane, placed above back */
+.main-flap-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 48.9vw;
+    right: 5px;
+}
+// /* front pane, placed above back */
 .front {
 	z-index: 2;
 	/* for firefox 31 */
 	transform: rotateX(0deg);
 }
 
-/* back, initially hidden pane */
+// /* back, initially hidden pane */
 .back {
 	transform: rotateX(180deg);
 }
-
-// .vertical.flip-container {
-// 	position: relative;
-// }
 
 	.vertical .back {
 		transform: rotateX(180deg);
 	}
 
 	.vertical.flip-container .flipper {
-		transform-origin: 100% 193.5px; /* half of height */
+		transform-origin: 100% 4.5vw; /* half of height */
 	}
 
 	.vertical.flip-container:hover .flipper {
         transform: rotateX(180deg);
     }
     
-    .back{
-        img{
-            transform: rotate(-43deg);
-        }
+//     .back{
+//         img{
+//             transform: rotate(-43deg);
+//         }
+//     }
+// //Polygon Shape
+
+
+    .flap-front, .flap-back{
+        width:100%;
     }
 
-    // .flip-container:hover{
-    //     top: 63.4%;
-    //     right: 54.5%;
-    // }
-
-//Polygon Shape
-
-
-.flap-front{
-    height:250px;
-}
+    .flap-back{
+        transform:rotate(180deg);
+    }

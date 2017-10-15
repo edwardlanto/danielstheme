@@ -20,7 +20,7 @@
            <li class="col-sm-1 space-out col-sm-offset-3" data-filter="1">Illustation </li>
            <li class="col-sm-1 space-out" data-filter="2">Editorial</li>
            <li class="col-sm-1 space-out" data-filter="3">Branding</li>
-            <li class="col-sm-1 space-out" data-filter="4">Lavel</li>
+            <li class="col-sm-1 space-out" data-filter="4">Label</li>
             <li class="col-sm-1 space-out" class="first-shuffle" data-filter="5" data-shuffle>Infographic</li>
             <li class="col-sm-1 space-out" data-filter="6">Web</li>
         </ul>

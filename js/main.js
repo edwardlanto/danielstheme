@@ -3,9 +3,7 @@
     $('.flap').hover();
 
     $('.first-shuffle').click();
-
-    // $('.carousel-cell:first-child').addClass('col-sm-offset-1');
-
+    
     $("#portfolio-list > li:gt(0)").hide();
     
     setInterval(function() { 
