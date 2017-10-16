@@ -1,43 +1,97 @@
 .home {
     overflow-x: hidden;
 
-    .polygon2 {
-        background: linear-gradient(-15deg, #fff 23%, transparent 0), linear-gradient(30deg, #fff 16%, gold 0);
-        height: 56vw;
-        width: 100%;
-        position: relative;
+    #page{
+        overflow-x:hidden;
+    }
 
-        // clip-path: polygon(0 0,100% 0%,100% 60%,0 100%);
-   
+    .polygon2 {
+        background: url(../../assets/final-background.png) no-repeat 50%;
+        background-size:100% 100%;
+        position: relative;
+        height: 63vw;
+        @include mini{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-bottom:105px;
+        }
     }
 
     .hero-icon {
         position: absolute;
-        left: 50%;
-        top: 6.6vw;
+        left: 51%;
+        top: 7.2vw;
         height: 40vw;
         width: 50%;
+        animation:hero-move 1.2s ease-in 0s 1;
+        animation-fill-mode:forwards;
+        z-index:1000;
+        @include mini{
+            display:none;
+        }
+    }
+
+    .mobile-hero{
+        width: 100px;
+        display:none;
+        @include mini{
+            display:block;
+        }
+    }
+
+    .hero-padding{
+        width:100%;
+        height:150px;
+        background:$main_color;
+    }
+
+    @keyframes hero-move{
+        0%{
+            transform:translate(400px, -100px) rotate(0deg);
+        }
+        100%{
+            transform:translate(0) rotate(1.7deg);
+        }
     }
 
     .name-container {
-        display: inline-block;
-        left: 30vw;
-        position: relative;
-        top: 51%;
-        z-index: 10;
+        display: block;
+        left: 21vw;
+        position: absolute;
+        top: 34%;
+        z-index: 3;
+        @include mini{
+            position:static;
+            transform: translateY(-10px);
+            
+        }
 
         h2 {
-            margin-top: 32px;
+            margin-top: 24px;
             font-family: 'Rockwell';
             font-weight: 900;
-            font-size: 45px;
+            font-size: 48px;
             color: #000;
+                @include mobile{
+                    font-size:39px
+                }
+                @include mini{
+                    font-size:19px;
+                    margin-bottom:0;
+                }
         }
 
         p {
-            font-size: 18px;
+            font-size: 21px;
             font-family: 'Lato', sans-serif;
             color: #000;
+            @include mobile{
+                font-size:18px
+            }
+            @include mini{
+                font-size:12px;
+            }
         }
     }
 
@@ -56,7 +110,7 @@
         min-height: 743px;
     }
 
-    .about-header, .portfolio-header, .clients-header {
+    .about-header, .portfolio-header, .clients-header, .clients-header2 {
         width: 220px;
         height: 40px;
         position: relative;
@@ -65,6 +119,12 @@
         margin-left: 30.7%;
         font-family: 'Rockwell';
         color: #000;
+        @include mini{
+            margin-left:0;
+            text-align: center;
+            margin: 0 auto;
+        }
+
     }
 
     .about-header:before, .portfolio-header:before, .clients-header:before {
@@ -74,6 +134,10 @@
         bottom: -20px;
         width: 34%;
         border-bottom: 5px solid #000;
+        @include mini{
+            left:33px;
+            border-bottom:none;
+        }
     }
 
     .resume {
@@ -84,6 +148,10 @@
             max-width: 350px;
             font-weight: 300;
             margin-bottom: 36px;
+             @include mini{
+                margin: 0 auto;
+                margin-bottom: 36px;
+             }
         }
 
         a {
@@ -95,21 +163,41 @@
         }
     }
 
+    .resume1{
+        @include mini{
+            margin-bottom:100px;
+        }
+    }
+
     .portfolio-section {
         margin-bottom: 30vw;
         margin-top: 11vw;
         min-height: 620px;
+        @include mini{
+            margin-bottom:20vw;
+        }
     }
 
     .portfolio-container {
         transform: translate(-76px, 190px);
-        position: relative;
+        position: relative; 
+        @include mini{
+            transform:translate(0);
+        }
     }
 
     .learn-more-container {
         position: relative;
         left: 69%;
-        bottom: 32vw;
+        bottom: 43vw;
+        opacity:0;
+        @include mini{
+            width: 350px;
+            margin: 0 auto;
+            text-align: center;
+            position:static;
+            margin-top:80px;
+        }
 
         p {
             color: $main_font_color;
@@ -118,6 +206,10 @@
             margin-bottom: 36px;
             font-size: 18px;
             font-weight: 300;
+            @include mini{
+                margin:0 auto;
+                margin-bottom:36px;
+            }
         }
 
         a {
@@ -129,6 +221,57 @@
         }
     }
 
+    .learn-fade{
+        animation:drop-learn 1s linear 0s 1;
+        animation-fill-mode:forwards;   
+        @include mobile{
+            animation:drop-learn1200 1s linear 0s 1;
+            animation-fill-mode:forwards;   
+        }
+        @include mini{
+            animation:drop-learn720 1s linear 0s 1;
+            animation-fill-mode:forwards; 
+        }
+    }
+
+    @keyframes drop-learn{
+        0%{
+            bottom: 43vw;
+            opacity:0;
+        }
+        100%{
+            bottom:25vw;
+            opacity:1;
+        
+        }
+    }
+
+    @keyframes drop-learn1200{
+        0%{
+            bottom: 43vw;
+            opacity:0;
+        }
+        100%{
+            bottom:17vw;
+            opacity:1;
+        
+        }
+    }
+
+    @keyframes drop-learn720{
+        0%{
+            bottom: 43vw;
+            opacity:0;
+        }
+        100%{
+            bottom:-10vw;
+            opacity:1;
+        
+        }
+    }
+
+
+
     .portfolio-hero {
         background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
         background-size: 100vw 57vw;
@@ -137,17 +280,29 @@
 
     .portfolio-header {
         margin-left: 34.5%;
-        top: 17vw;
+        top: 10vw;
+            @include mini{
+                margin-left:0;
+                margin: 0 auto;
+            }
     }
 
+
+
     #portfolio-list {
-        margin: 22vw auto;
+        margin: 15vw auto;
         width: 31%;
         height: 42vw;
         padding: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         overflow: hidden;
         margin-left: 34.5%;
+        @include mini{
+            width: 80vw;
+            height: 516px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
 
         .portfolio-picture {
             position: absolute;
@@ -168,13 +323,22 @@
         display: flex;
         padding: 0 8%;
         margin-top: 140px;
+        @include mini{
+            flex-direction:column;
+        }
 
         li {
             flex-basis: 20%;
             text-align: center;
+            @include mini{
+                margin-bottom:50px;
+            }
 
             img {
                 width: 30%;
+                @include mini{
+                    max-width:100px;
+                }
             }
 
             p {
@@ -188,11 +352,29 @@
     .resume-container {
         margin-left: 28%;
         margin-top: 7%;
-        display: flex;
-        align-items: flex-end;
+            @include mini{
+                margin-left:0;
+                margin-top:0;
+                text-align: center;
+            }
     }
 
     //Client Section
+
+    .clients-header{
+        top: 63vw;
+        margin-left:34.5%;
+        @include mini{
+            display:none;
+        }
+    }
+
+    .client-header2{
+        display:none;
+        @include mini{
+            display:block;
+        }
+    }
 
     .client-section {
         margin-bottom: 160px;
@@ -201,7 +383,11 @@
     .main-carousel {
         margin-top: 150px;
         padding-left: 0;
-        padding: 0 61px;
+        padding: 0 120px;
+        @include mini{
+            padding:0 60px;
+            margin-top:0;
+        }
     }
 
     .carousel-cell {
@@ -211,6 +397,11 @@
         img {
             height: 30%;
             width: 63%;
+            padding: 20px;
+                @include mini{
+                    width:100%;
+                    height:auto;
+                }
         }
     }
 
@@ -251,16 +442,14 @@
     }
 
     .flickity-viewport {
-        height: 200px !important;
+        height: 450px !important;
     }
 
-    .clients-header {
-        margin-left: 28.7%;
-        font-size: 39px;
-
-        &:before {
+    .clients-header:before {
             left: 3px;
-        }
+            @include mini{
+                left:49px
+            }
     }
 
     .clients-list {
@@ -271,6 +460,10 @@
     .flickity-prev-next-button {
         border: none;
         box-shadow: none;
+    }
+
+    .flickity-page-dots{
+        display:none;
     }
 
     //Contact Section
@@ -293,85 +486,4 @@
     left: 10px;
     right: 10px;
     bottom: 10px;
-}
-
-// /* entire container, keeps perspective */
-.flip-container {
-    perspective: 1000px;
-
-    // transition:all 1s linear;
-}
-
-// 	/* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-    transform: rotateX(180deg);
-}
-
-// .flip-container, .front, .back {
-// 	width: 320px;
-// 	height: 480px;
-// }
-
-// /* flip speed goes here */
-.flipper {
-    transition: 1s;
-    transform-style: preserve-3d;
-}
-
-// /* hide back of pane during swap */
-.front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.main-flap-wrapper {
-    position: absolute;
-    width: 100%;
-    top: 48.9vw;
-    right: 5px;
-}
-
-// /* front pane, placed above back */
-.front {
-    z-index: 2;
-
-    /* for firefox 31 */
-    transform: rotateX(0deg);
-}
-
-// /* back, initially hidden pane */
-.back {
-    transform: rotateX(180deg);
-}
-
-.vertical .back {
-    transform: rotateX(180deg);
-}
-
-.vertical.flip-container .flipper {
-    transform-origin: 100% 4.5vw;
-
-    /* half of height */
-}
-
-// .vertical.flip-container:active .flipper {
-//     transform: rotateX(0deg);
-// }
-
-// .hover {
-//     transform: rotateX(0deg);
-// }
-
-.flipper {
-    transform: rotateX(180deg);
-}
-
-.flap-front, .flap-back {
-    width: 100%;
-}
-
-.flap-back {
-    transform: rotate(180deg);
 }

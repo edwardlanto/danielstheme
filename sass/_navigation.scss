@@ -5,148 +5,241 @@
 /* Links */
 
 a {
-	color: $color__link;
+    color: $color__link;
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+    &:visited {
+        color: $color__link-visited;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color__link-hover;
+    }
+
+    &:focus {
+        outline: thin dotted;
+    }
+
+    &:hover,
+    &:active {
+        outline: 0;
+    }
 }
 
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+    ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
+        ul {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            float: left;
+            position: absolute;
+            top: $base__space-unit;
+            left: -999rem;
+            z-index: 99999;
 
-			ul {
-				left: -999rem;
-				top: 0;
-			}
+            ul {
+                left: -999rem;
+                top: 0;
+            }
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+            li {
+                &:hover > ul,
+                &.focus > ul {
+                    left: 100%;
+                }
+            }
 
-			a {
-				width: 200px;
-			}
+            a {
+                width: 200px;
+            }
 
-			:hover > a,
-			.focus > a {
-			}
+            :hover > a,
+            .focus > a {}
 
-			a:hover,
-			a.focus {
-			}
-		}
+            a:hover,
+            a.focus {}
+        }
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
+        li:hover > ul,
+        li.focus > ul {
+            left: auto;
+        }
+    }
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
+    li {
+        float: left;
+        position: relative;
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+        &:hover > a,
+        &.focus > a {}
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a {}
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+    display: block;
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-navigation ul {
+        display: block;
+    }
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+    .site-main & {
+        margin: 0 0 $base__space-unit;
+        overflow: hidden;
+    }
 
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
+    .nav-previous {
+        float: left;
+        width: 50%;
+    }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+    .nav-next {
+        float: right;
+        text-align: right;
+        width: 50%;
+    }
 }
 
+#site-navigation {
+    display: none;
+}
 
-#site-navigation{
+.nav-list {
+    padding: 1% 80px;
+    font-size: 25px;
+    z-index: 1000;
+    position: relative;
+	background: $main_color;
+	margin-bottom:0;
+	@include mobile{
+		font-size:20px;
+		padding-bottom:0;
+	}
+
+    @include mini {
+        position: static;
+        float: none !important;
+		font-size: 21px;
+		display:none;
+        margin: 0;
+        text-align: center;
+		padding-bottom: 3px;
+    }
+
+
+    li {
+		transition:all 0.3s linear;
+        a {
+            color: #000;
+        }
+
+        @include main-font;
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        @include mini {
+            background: $main_color;
+        }
+    }
+}
+
+// Hamburger
+$bar-width: 50px;
+$bar-height: 5px;
+$bar-spacing: 12.5px;
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    margin-left: 20px;
+    width: $bar-width;
+    height: $bar-height + $bar-spacing * 2;
+	cursor: pointer;
+	margin-top:20px;
 	display:none;
+	@include mini{
+		display:block;
+	}
 }
 
-.nav-list{
-	padding: 3% 80px ;
-	font-size: 25px;
-	transition:all 0.3s linear;
-		li{
-			a{
-				color:#000;
-			}
-			@include main-font;
-					a:hover{
-						text-decoration:none;
-					}
-		}
+.bar,
+.bar:after,
+.bar:before {
+    width: $bar-width;
+    height: $bar-height;
+}
+
+.bar {
+    position: relative;
+    transform: translateY($bar-spacing);
+    background: #000;
+    transition: all 0ms 300ms;
+
+    &.animate {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
+.bar:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: $bar-spacing;
+    background: #000;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: $bar-spacing;
+    background: #000;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }

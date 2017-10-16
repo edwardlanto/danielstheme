@@ -12,7 +12,11 @@
             <li class="nav-item col-sm-2"><a href="/">Clients</a></li>
             <li class="nav-item col-sm-2"><a href="/danielstheme">Contact Me</a></li>
         </ul>
-        <div class="portfolio-header-container container"><h1>Portfolio</h1></div>
+        <div class="portfolio-header-container container">
+        <div class="hamburger">
+                    <div class="bar"></div>	
+                </div>
+            <h1>Portfolio</h1></div>
         <section class="portfolio-gallery">
         <div class="shuffle-nav-wrapper">
         <ul class="shuffle-nav container">
@@ -25,8 +29,7 @@
             <li class="col-sm-1 space-out" data-filter="6">Web</li>
         </ul>
         </div>
-<div id="portfolio-list">
-        <div id="main-list" class="filtr-container container">
+        <ul id="main-list" class="filtr-container container portfolio-wrapper">
                         <?php
 $loop = new WP_Query(array(
 	'post_type' => 'pictures'
@@ -36,15 +39,15 @@ if ($loop->have_posts()):
 	while ($loop->have_posts()):
 		$loop->the_post(); ?>
                             <!-- <a href="<?php echo the_post_thumbnail_url() ?>" data-lightbox="test1" data-title="My caption<br/>" class"lightbox-container"> -->
-                            <div class="filtr-item col-sm-3" data-category="<?php echo CFS()->get('category'); ?>" data-sort="value">
-                            <div class="hidden image-text">
-                                <h3>Allergro</h3>
-                                <p class="caption1">Life Style Magazine</p>
-                                <p class="caption2">Editorial Design</p>
-                            </div>
+                            <li class="filtr-item col-sm-12 col-md-3 portfolio-item" data-category="<?php echo CFS()->get('category'); ?>" data-sort="value">
+                                <div class="hidden image-text">
+                                    <h3>Allergro</h3>
+                                    <p class="caption1">Life Style Magazine</p>
+                                    <p class="caption2">Editorial Design</p>
+                                </div>
                                 <?php
 		the_post_thumbnail(); ?>
-                            </div>
+                            </li>
                             <!-- </a> -->
                                 
                             <?php
@@ -53,7 +56,6 @@ endif;
 wp_reset_postdata();
 ?>
                         </ul>
-                    </div>
 </section>
 <?php get_sidebar() ; ?>
 		</main><!-- #main -->

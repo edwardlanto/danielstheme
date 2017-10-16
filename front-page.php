@@ -4,34 +4,28 @@
 get_header() ?>
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+            <ul class="nav-list container row pull-right">
+                <li class="nav-item col-md-5ths col-sm-2"><a href="/">Home</a></li>
+                <li class="nav-item col-md-5ths col-sm-2"><a href="#about">About Me</a></li>
+                <li class="nav-item col-md-5ths col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
+                        <li class="nav-item col-md-5ths col-sm-2"><a href="#clients">Clients</a></li>
+                        <li class="nav-item col-md-5ths col-sm-2"><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="hero-padding">
+                <div class="hamburger">
+                    <div class="bar"></div>	
+                </div>
+            </div>
                 <div class="polygon2">
                     <!-- <div class="logo">Logo</div> -->
-                    <ul class="nav-list container row pull-right">
-                        <li class="nav-item col-md-5ths col-xs-6"><a href="/">Home</a></li>
-                        <li class="nav-item col-md-5ths col-xs-6"><a href="#about">About Me</a></li>
-                        <li class="nav-item col-md-5ths col-xs-6"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-                        <li class="nav-item col-md-5ths col-xs-6"><a href="#clients">Clients</a></li>
-                        <li class="nav-item col-md-5ths col-xs-6"><a href="#contact">Contact Me</a></li>
-                    </ul>
                     <div class="name-container">
                         <h2>Daniel Valdes</h2>
                         <p>Graphic Design and Illustrator</p>
                     </div><!--name-container-->
                     <img src="<?php
 echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" alt="">
-                            <div class="main-flap-wrapper">
-                                <div class="flip-container vertical flap">
-                                    <div class="flipper">
-                                        <div class="front">
-                                            <img class="flap-front" src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
-                                        </div>
-                                        <div class="back">
-                                            <img class="flap-back" src="<?php echo get_template_directory_uri(); ?>/assets/flap.png" alt="">
-                                        </div>
-                                    </div><!--flipper-->
-                                </div><!--flipper-container-->
-                            </div>
-
+<img src="<?php
+echo get_template_directory_uri(); ?>/assets/logo-mobile.png" class="mobile-hero" alt="">
     
                 </div><!--polygon2-->
             <section class="about-me-section" id="about">
@@ -66,11 +60,12 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 <div class="resume-container container">
                     <div class="resume1 resume col-sm-4">
                         <p>Award winning visual artist and graphic  designer with experience in editorial  designing</p>
-                        <a href="<?php echo CFS()->get( 'resume_english' ); ?>" class="yellow-button">Download Resume</a>
+                        <a href="http://localhost:8888/danielstheme/wp-content/uploads/2017/10/Daniel-Valdes-Resume-1.pdf" class="yellow-button">Download Resume</a>
+                        <p class="test"><?php echo CFS()->get( 'resume_english' ); ?>
                     </div><!--resume1-->
                     <div class="resume2 resume col-sm-5">
                         <p>Award winning and graphic designer  with experiecne in editorial  design, branding, t, oil painting.</p>
-                        <a href="#" class="yellow-button">Descargar Currículum</a>
+                        <a href="http://localhost:8888/danielstheme/wp-content/uploads/2017/10/Daniel-Valdes-Curriculum.pdf" class="yellow-button">Descargar Currículum</a>
                     </div> 
                 </div><!--resume-container-->
             </section><!--about-me-section-->
@@ -78,6 +73,8 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 <div class="portfolio-hero">
                 <div class="portfolio-container">
                     <h2 class="portfolio-header">Portfolio</h2> 
+                    <h2 class="clients-header">Clients</h2>
+                    <div class="list-wrapper">
                     <ul id="portfolio-list" class="filtr-container">
                         <?php
     $loop = new WP_Query(array(
@@ -98,6 +95,7 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
     wp_reset_postdata();
     ?>
                     </ul>
+                    </div>
                     <div class="learn-more-container">
                         <p>Award winning visual artist and 
                         graphic designer with experience 
@@ -108,7 +106,7 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 
             </section>
             <section class="client-section" id="clients">
-            <h2 class="clients-header">Clients</h2>
+            <h2 class="clients-header2">Clients</h2>
             <ul class="main-carousel">
             <?php
                 $clients = new WP_Query(array(
@@ -117,7 +115,7 @@ echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
                 if ($clients->have_posts()):
                 while ($clients->have_posts()):
                 $clients->the_post(); ?>                                       
-                                    <li class="carousel-cell col-md-5ths col-xs-6">
+                                    <li class="carousel-cell col-xs-12 col-md-5ths">
                                         <?php
                 the_post_thumbnail(); ?>
                                     </li>                                            

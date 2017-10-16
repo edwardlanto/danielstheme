@@ -64,6 +64,12 @@ ul{
 			left: -3%;
 			max-width: 790px;
 			top: 241px;
+			@include mini{
+				width: 114vw;
+				position: absolute;
+				left: -13%;
+				top: 595px;
+			}
 		}
 }
 
@@ -79,7 +85,10 @@ ul{
 
 input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
 	background:#fff;
+	border:none;
 }
+
+
 
 
 
@@ -88,7 +97,7 @@ form {
 	margin: 0 auto;
 
 	textarea {
-		height: 223px;
+		height: 221px;
 		padding-top:20px;
 	}
 
@@ -106,6 +115,9 @@ form {
 		letter-spacing:0.5px;
 		color: #666;
 		padding-left:25px;
+		@include mini{
+			width:80vw;
+		}
 	}
 
 	.wpcf7-submit {
@@ -114,10 +126,9 @@ form {
 		background:#fff;
 		font-size:17px;
 		border:none;
-
-		/* text-align: center; */
 		padding: 0;
-
+		text-align: left;
+		padding-left: 25px;
 		/* text-align: center; */
 		float: right;
 	}
@@ -127,10 +138,6 @@ form {
 	padding-top: 264px;
 }
 
-.widget_title {
-	text-align: left;
-	color:#000;
-}
 
 .wpcf7{
 	position: relative;
@@ -144,6 +151,9 @@ form {
 	bottom: -20px;        
 	width: 34%;
 	border-bottom: 5px solid #000;
+	@include mini{
+		border-bottom:none;
+	}
 }
 
 .widget-title {
@@ -156,6 +166,9 @@ form {
 	margin-left: 28.7%;
 	font-family:'Rockwell';
 	color:#000;
+	@include mini{
+		margin:0 auto;
+	}
 }
 
 .hidden{
@@ -180,4 +193,10 @@ textarea {resize: none}
 	display: flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+label{
+	@include mini{
+		overflow-x: hidden;
+	}
 }
