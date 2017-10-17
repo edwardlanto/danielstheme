@@ -23,9 +23,9 @@ get_header() ?>
                         <p>Graphic Design and Illustrator</p>
                     </div><!--name-container-->
                     <img src="<?php
-echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" alt="">
+echo get_template_directory_uri(); ?>/assets/icon-hero.png" class="hero-icon" alt="daniel-valdes-icon-hero">
 <img src="<?php
-echo get_template_directory_uri(); ?>/assets/logo-mobile.png" class="mobile-hero" alt="">
+echo get_template_directory_uri(); ?>/assets/logo-mobile.png" class="mobile-hero" alt="daniel-valdes-icon-hero-mobile">
     
                 </div><!--polygon2-->
             <section class="about-me-section" id="about">
@@ -33,27 +33,27 @@ echo get_template_directory_uri(); ?>/assets/logo-mobile.png" class="mobile-hero
                 <ul class="skill-list">
                 <li>
                     <img src="<?php
-echo get_template_directory_uri(); ?>/assets/web.png" alt="">
+echo get_template_directory_uri(); ?>/assets/web.png" alt="mouse-icon">
                     <p>UI/UX</p>
                 </li>
                 <li>
                     <img src="<?php
-echo get_template_directory_uri(); ?>/assets/print.png" alt="">
+echo get_template_directory_uri(); ?>/assets/print.png" alt="print-icon">
                     <p>Print</p>
                 </li>
                 <li>
                     <img src="<?php
-echo get_template_directory_uri(); ?>/assets/illustration.png" alt="">
+echo get_template_directory_uri(); ?>/assets/illustration.png" alt="illustration-icon">
                     <p>Illustration</p>
                 </li>
                 <li>
                     <img src="<?php
-echo get_template_directory_uri(); ?>/assets/editorial.png" alt="">
+echo get_template_directory_uri(); ?>/assets/editorial.png" alt="editorial-icon">
                     <p>Editorial</p>
                 </li>
                 <li>
                         <img src="<?php
-echo get_template_directory_uri(); ?>/assets/branding.png" alt="">
+echo get_template_directory_uri(); ?>/assets/branding.png" alt="branding">
                         <p>Branding</p>
                     </li>
                 </ul>

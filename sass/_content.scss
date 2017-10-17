@@ -5,198 +5,208 @@
 /* Posts and pages */
 
 .sticky {
-	display: block;
+    display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+    margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+    display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+    margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+    clear: both;
+    margin: 0 0 $base__space-unit;
 }
 
 /* Asides */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
-}
-.bypostauthor {
-	display: block;
+    word-wrap: break-word;
 }
 
-ul{
-	list-style:none;
+.bypostauthor {
+    display: block;
+}
+
+ul {
+    list-style: none;
 }
 
 #secondary {
-	background: $main_color;
-	background-size: 100%;
-	position:relative;
-	padding-bottom:4rem;
-	overflow-y: hidden;
-		img{
-			width: 49vw;
-			position: absolute;
-			left: -3%;
-			max-width: 790px;
-			top: 241px;
-			@include mini{
-				width: 114vw;
-				position: absolute;
-				left: -13%;
-				top: 595px;
-			}
-		}
-}
+    background: $main_color;
+    background-size: 100%;
+    position: relative;
+    padding-bottom: 4rem;
+    overflow-y: hidden;
 
-.yellow-button{
-	transition:all 0.3s linear;
-	cursor:pointer;
-	border:2px solid $main_color;
-		&:hover{
-			background:#fff;
-			text-decoration:none;
-		}
-}
+    img {
+        width: 49vw;
+        position: absolute;
+        left: -3%;
+        max-width: 790px;
+        top: 241px;
 
-input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
-	background:#fff;
-	border:none;
+        @include mini {
+            width: 114vw;
+            position: absolute;
+            left: -13%;
+            top: 595px;
+        }
+    }
 }
 
 
-
-
+input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+    background: #fff;
+    border: none;
+}
 
 form {
-	width: 75%;
-	margin: 0 auto;
+    width: 75%;
+    margin: 0 auto;
 
-	textarea {
-		height: 221px;
-		padding-top:20px;
-	}
+    textarea {
+        height: 221px;
+        padding-top: 20px;
+    }
 
-	input {
-		height: 40px;
-	}
+    input {
+        height: 40px;
+    }
 
-	input, textarea {
-		background: #fff;
-		width: 35vw;
-		padding-left: 25px;
-		font-size: 17px;
-		font-family: 'Lato', sans-serif;
-		font-weight:300;
-		letter-spacing:0.5px;
-		color: #666;
-		padding-left:25px;
-		@include mini{
-			width:80vw;
-		}
-	}
+    input, textarea {
+        background: #fff;
+        width: 35vw;
+        padding-left: 25px;
+        font-size: 17px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        color: #666;
+        padding-left: 25px;
 
-	.wpcf7-submit {
-		box-shadow: none;
-		width: 145px;
-		background:#fff;
-		font-size:17px;
-		border:none;
-		padding: 0;
-		text-align: left;
-		padding-left: 25px;
-		/* text-align: center; */
-		float: right;
-	}
+        @include mini {
+            width: 80vw;
+        }
+    }
+
+    .wpcf7-submit {
+        box-shadow: none;
+        width: 145px;
+        background: #fff;
+        font-size: 17px;
+        border: none;
+        padding: 0;
+        text-align: left;
+        padding-left: 25px;
+
+        /* text-align: center; */
+        float: right;
+    }
 }
 
 .custom-html-widget {
-	padding-top: 264px;
+    padding-top: 210px;
 }
 
-
-.wpcf7{
-	position: relative;
-	bottom: 40px;    
+.wpcf7 {
+    position: relative;
+    bottom: 40px;
 }
 
-.widget-title:before{
-	content: "";
-	position: absolute;
-	left: 4px;
-	bottom: -20px;        
-	width: 34%;
-	border-bottom: 5px solid #000;
-	@include mini{
-		border-bottom:none;
-	}
+.widget-title:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    bottom: -20px;
+    width: 34%;
+    border-bottom: 5px solid #000;
+
+    @include mini {
+        border-bottom: none;
+    }
 }
 
 .widget-title {
-	top:100px;
-	width: 240px;
-	height: 40px;
-	position: relative;
-	z-index: 1;
-	font-size: 39px;
-	margin-left: 28.7%;
-	font-family:'Rockwell';
-	color:#000;
-	@include mini{
-		margin:0 auto;
-	}
+    top: 50px;
+    width: 240px;
+    height: 40px;
+    position: relative;
+    z-index: 1;
+    font-size: 39px;
+    margin-left: 28.7%;
+    font-family: 'Rockwell';
+    color: #000;
+
+    @include mini {
+        margin: 0 auto;
+    }
 }
 
-.hidden{
-	display:none;
+.hidden {
+    display: none;
+
+    @include mini {
+        display: block !important;
+    }
 }
 
-.show{
-	display:block;
+.show {
+    display: block;
 }
 
-.flex{
-	display:flex;
+.flex {
+    display: flex;
 }
 
-input{
-	border:none;
+input {
+    border: none;
 }
 
-textarea {resize: none}
+textarea {
+    resize: none;
+}
 
-.label-wrapper{
-	display: flex;
+.label-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-label{
-	@include mini{
-		overflow-x: hidden;
-	}
+label {
+    @include mini {
+        overflow-x: hidden;
+    }
+}
+
+//Flickity Global
+
+.flickity-prev-next-button {
+    border: none;
+    box-shadow: none;
+}
+
+.flickity-page-dots {
+    display: none;
 }

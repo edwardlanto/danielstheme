@@ -6,6 +6,7 @@
         font-weight: 900;
         letter-spacing: 3px;
         margin-bottom:45px;
+        color:#000;
         @include mini{
             text-align:center;
             transform: translateY(120px);
@@ -17,7 +18,7 @@
             margin:0 auto;
             background:$main_color;
             height:250px;
-            margin-bottom:100px;
+            margin-bottom:30px;
         }
     }
 
@@ -58,13 +59,11 @@
         }
     }
 
-    .wp-post-image{
-        border-radius:15px;
-        @include mini{
-            height: auto;
-            width: 400px;
-        }
+    .shuffle-nav{
+        margin-bottom:0;
     }
+
+
 
     .item{
         color:red;
@@ -73,12 +72,15 @@
     .main-portfolio-picture{
         img{
             width:300px;
-            max-height:200px;
+            max-height:260px;
         }
     }
 
     .main-list{
         position:static;
+        @include mini{
+            padding-left:0;
+        }
     }
 
     .wp-post-image{
@@ -136,6 +138,9 @@
 
     #secondary{
         margin-top:35rem;
+        @include mini{
+            margin-top:5rem;
+        }
     }
 
     .image-text{
@@ -174,14 +179,59 @@
         }
     }
 
-    .shuffle-nav{
-        margin-bottom:0;
+    //Flickity Slider
+
+    .main-carousel{
+        .flickity-prev-next-button:active, .flickity-prev-next-button:hover{
+            box-shadow:none;
+            text-shadow:none;
+        }
+        @include mini{
+            padding:0;
+        }
+    }
+
+    .is-selected{
+        width: 100vw;
+        text-align:center;
+    }
+
+    .carousel-cell{
+        padding-left:0;
+    }
+
+
+    .flickity-prev-next-button{
+        top:300px;
+        background:none;
+    }
+
+    .wp-post-image{
+        border-radius:15px;
+        @include mini{
+            height: auto;
+            width: 70vw !important;
+        }
+    }
+
+    .carousel-cell {
+        padding-right:0;
+        height: auto; /* height of carousel */
+      }
+
+    .carousel-cell:not(.is-selected){
+        visibility:hidden;
+    }
+
+    .carousel-cell:last-child{
+        transform:translateX(-30%);
     }
 
     
 
+    
+
 
     
 
-    //Filterizr end
 }

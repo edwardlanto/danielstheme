@@ -481,9 +481,10 @@ big {
     overflow-x: hidden; }
   .home .polygon2 {
     background: url(../../assets/final-background.png) no-repeat 50%;
-    background-size: 100% 100%;
+    background-size: 123vw 100%;
     position: relative;
-    height: 63vw; }
+    height: 63vw;
+    background-position: -43px 0px; }
     @media (max-width: 725px) {
       .home .polygon2 {
         display: -ms-flexbox;
@@ -496,7 +497,7 @@ big {
   .home .hero-icon {
     position: absolute;
     left: 51%;
-    top: 7.2vw;
+    top: 10.2vw;
     height: 40vw;
     width: 50%;
     animation: hero-move 1.2s ease-in 0s 1;
@@ -520,7 +521,7 @@ big {
   0% {
     transform: translate(400px, -100px) rotate(0deg); }
   100% {
-    transform: translate(0) rotate(1.7deg); } }
+    transform: translate(0) rotate(5deg); } }
   .home .name-container {
     display: block;
     left: 21vw;
@@ -604,7 +605,13 @@ big {
     color: #000;
     font-size: 17px;
     font-family: 'Lato', sans-serif;
-    padding: 7px 20px; }
+    padding: 7px 20px;
+    transition: all 0.3s ease-in; }
+    .home .resume a:hover {
+      background: #fff;
+      border: 3px solid #f8d406;
+      text-decoration: none;
+      letter-spacing: 1px; }
   @media (max-width: 725px) {
     .home .resume1 {
       margin-bottom: 100px; } }
@@ -813,14 +820,14 @@ big {
     @media (max-width: 725px) {
       .home .clients-header:before {
         left: 49px; } }
+  .home .clients-header2 {
+    display: none; }
+    @media (max-width: 725px) {
+      .home .clients-header2 {
+        display: block; } }
   .home .clients-list {
     margin: 0 auto;
     margin-top: 145px; }
-  .home .flickity-prev-next-button {
-    border: none;
-    box-shadow: none; }
-  .home .flickity-page-dots {
-    display: none; }
 
 #slideshow {
   margin: 50px auto;
@@ -845,7 +852,8 @@ big {
     font-family: 'Rockwell';
     font-weight: 900;
     letter-spacing: 3px;
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    color: #000; }
     @media (max-width: 725px) {
       .page-template-portfolio h1 {
         text-align: center;
@@ -855,7 +863,7 @@ big {
       margin: 0 auto;
       background: #f8d406;
       height: 250px;
-      margin-bottom: 100px; } }
+      margin-bottom: 30px; } }
   .page-template-portfolio #primary .nav-list {
     margin-bottom: 250px;
     background: transparent; }
@@ -887,19 +895,18 @@ big {
     @media (max-width: 725px) {
       .page-template-portfolio .shuffle-nav-wrapper {
         display: none; } }
-  .page-template-portfolio .wp-post-image {
-    border-radius: 15px; }
-    @media (max-width: 725px) {
-      .page-template-portfolio .wp-post-image {
-        height: auto;
-        width: 400px; } }
+  .page-template-portfolio .shuffle-nav {
+    margin-bottom: 0; }
   .page-template-portfolio .item {
     color: red; }
   .page-template-portfolio .main-portfolio-picture img {
     width: 300px;
-    max-height: 200px; }
+    max-height: 260px; }
   .page-template-portfolio .main-list {
     position: static; }
+    @media (max-width: 725px) {
+      .page-template-portfolio .main-list {
+        padding-left: 0; } }
   .page-template-portfolio .wp-post-image {
     height: auto;
     width: 100%; }
@@ -930,6 +937,9 @@ big {
       width: 1500px; } }
   .page-template-portfolio #secondary {
     margin-top: 35rem; }
+    @media (max-width: 725px) {
+      .page-template-portfolio #secondary {
+        margin-top: 5rem; } }
   @media (max-width: 725px) {
     .page-template-portfolio .image-text {
       text-align: center; } }
@@ -951,8 +961,34 @@ big {
     border: none; }
   .page-template-portfolio .nav-item a {
     color: #000; }
-  .page-template-portfolio .shuffle-nav {
-    margin-bottom: 0; }
+  .page-template-portfolio .main-carousel .flickity-prev-next-button:active, .page-template-portfolio .main-carousel .flickity-prev-next-button:hover {
+    box-shadow: none;
+    text-shadow: none; }
+  @media (max-width: 725px) {
+    .page-template-portfolio .main-carousel {
+      padding: 0; } }
+  .page-template-portfolio .is-selected {
+    width: 100vw;
+    text-align: center; }
+  .page-template-portfolio .carousel-cell {
+    padding-left: 0; }
+  .page-template-portfolio .flickity-prev-next-button {
+    top: 300px;
+    background: none; }
+  .page-template-portfolio .wp-post-image {
+    border-radius: 15px; }
+    @media (max-width: 725px) {
+      .page-template-portfolio .wp-post-image {
+        height: auto;
+        width: 70vw !important; } }
+  .page-template-portfolio .carousel-cell {
+    padding-right: 0;
+    height: auto;
+    /* height of carousel */ }
+  .page-template-portfolio .carousel-cell:not(.is-selected) {
+    visibility: hidden; }
+  .page-template-portfolio .carousel-cell:last-child {
+    transform: translateX(-30%); }
 
 /*--------------------------------------------------------------
 # Forms
@@ -1319,14 +1355,6 @@ ul {
         left: -13%;
         top: 595px; } }
 
-.yellow-button {
-  transition: all 0.3s linear;
-  cursor: pointer;
-  border: 2px solid #f8d406; }
-  .yellow-button:hover {
-    background: #fff;
-    text-decoration: none; }
-
 input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
   background: #fff;
   border: none; }
@@ -1365,7 +1393,7 @@ form {
     float: right; }
 
 .custom-html-widget {
-  padding-top: 264px; }
+  padding-top: 210px; }
 
 .wpcf7 {
   position: relative;
@@ -1383,7 +1411,7 @@ form {
       border-bottom: none; } }
 
 .widget-title {
-  top: 100px;
+  top: 50px;
   width: 240px;
   height: 40px;
   position: relative;
@@ -1398,6 +1426,9 @@ form {
 
 .hidden {
   display: none; }
+  @media (max-width: 725px) {
+    .hidden {
+      display: block !important; } }
 
 .show {
   display: block; }
@@ -1423,6 +1454,13 @@ textarea {
 @media (max-width: 725px) {
   label {
     overflow-x: hidden; } }
+
+.flickity-prev-next-button {
+  border: none;
+  box-shadow: none; }
+
+.flickity-page-dots {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Media

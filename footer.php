@@ -11,17 +11,10 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
-			<!--test-->
 				</div><!-- .site-info -->
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
-	<!-- <script src="./js/jquery.filterizr.min.min"/></script> -->
-	<script type="text/javascript" href="./js/main.js"></script>
-	<script type="text/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- <script>
-
-	</script> -->
 	</body>
 </html>

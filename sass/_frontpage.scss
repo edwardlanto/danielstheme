@@ -1,57 +1,62 @@
 .home {
     overflow-x: hidden;
 
-    #page{
-        overflow-x:hidden;
+    #page {
+        overflow-x: hidden;
     }
 
     .polygon2 {
         background: url(../../assets/final-background.png) no-repeat 50%;
-        background-size:100% 100%;
+        background-size: 123vw 100%;
         position: relative;
         height: 63vw;
-        @include mini{
+        background-position: -43px 0px;
+
+        @include mini {
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
-            padding-bottom:105px;
+            padding-bottom: 105px;
         }
     }
 
     .hero-icon {
         position: absolute;
         left: 51%;
-        top: 7.2vw;
+        top: 10.2vw;
         height: 40vw;
         width: 50%;
-        animation:hero-move 1.2s ease-in 0s 1;
-        animation-fill-mode:forwards;
-        z-index:1000;
-        @include mini{
-            display:none;
+        animation: hero-move 1.2s ease-in 0s 1;
+        animation-fill-mode: forwards;
+        z-index: 1000;
+
+        @include mini {
+            display: none;
         }
     }
 
-    .mobile-hero{
+    .mobile-hero {
         width: 100px;
-        display:none;
-        @include mini{
-            display:block;
+        display: none;
+
+        @include mini {
+            display: block;
         }
     }
 
-    .hero-padding{
-        width:100%;
-        height:150px;
-        background:$main_color;
+    .hero-padding {
+        width: 100%;
+        height: 150px;
+        background: $main_color;
     }
 
-    @keyframes hero-move{
-        0%{
-            transform:translate(400px, -100px) rotate(0deg);
+    @keyframes hero-move {
+        0% {
+            transform: translate(400px, -100px) rotate(0deg);
         }
-        100%{
-            transform:translate(0) rotate(1.7deg);
+
+        100% {
+            transform: translate(0) rotate(5deg);
         }
     }
 
@@ -61,11 +66,12 @@
         position: absolute;
         top: 34%;
         z-index: 3;
-        @include mini{
-            position:static;
+
+        @include mini {
+            position: static;
             transform: translateY(-10px);
-            
         }
+
 
         h2 {
             margin-top: 24px;
@@ -73,24 +79,30 @@
             font-weight: 900;
             font-size: 48px;
             color: #000;
-                @include mobile{
-                    font-size:39px
-                }
-                @include mini{
-                    font-size:19px;
-                    margin-bottom:0;
-                }
+
+            @include mobile {
+                font-size: 39px;
+            }
+
+
+            @include mini {
+                font-size: 19px;
+                margin-bottom: 0;
+            }
         }
 
         p {
             font-size: 21px;
             font-family: 'Lato', sans-serif;
             color: #000;
-            @include mobile{
-                font-size:18px
+
+            @include mobile {
+                font-size: 18px;
             }
-            @include mini{
-                font-size:12px;
+
+
+            @include mini {
+                font-size: 12px;
             }
         }
     }
@@ -119,12 +131,12 @@
         margin-left: 30.7%;
         font-family: 'Rockwell';
         color: #000;
-        @include mini{
-            margin-left:0;
+
+        @include mini {
+            margin-left: 0;
             text-align: center;
             margin: 0 auto;
         }
-
     }
 
     .about-header:before, .portfolio-header:before, .clients-header:before {
@@ -134,9 +146,10 @@
         bottom: -20px;
         width: 34%;
         border-bottom: 5px solid #000;
-        @include mini{
-            left:33px;
-            border-bottom:none;
+
+        @include mini {
+            left: 33px;
+            border-bottom: none;
         }
     }
 
@@ -148,10 +161,11 @@
             max-width: 350px;
             font-weight: 300;
             margin-bottom: 36px;
-             @include mini{
+
+            @include mini {
                 margin: 0 auto;
                 margin-bottom: 36px;
-             }
+            }
         }
 
         a {
@@ -160,12 +174,19 @@
             font-size: 17px;
             font-family: 'Lato', sans-serif;
             padding: 7px 20px;
+            transition:all 0.3s ease-in;
+            &:hover{
+                background:#fff;
+                border:3px solid $main_color;
+                text-decoration:none;
+                letter-spacing:1px;
+            }
         }
     }
 
-    .resume1{
-        @include mini{
-            margin-bottom:100px;
+    .resume1 {
+        @include mini {
+            margin-bottom: 100px;
         }
     }
 
@@ -173,16 +194,18 @@
         margin-bottom: 30vw;
         margin-top: 11vw;
         min-height: 620px;
-        @include mini{
-            margin-bottom:20vw;
+
+        @include mini {
+            margin-bottom: 20vw;
         }
     }
 
     .portfolio-container {
         transform: translate(-76px, 190px);
-        position: relative; 
-        @include mini{
-            transform:translate(0);
+        position: relative;
+
+        @include mini {
+            transform: translate(0);
         }
     }
 
@@ -190,14 +213,16 @@
         position: relative;
         left: 69%;
         bottom: 43vw;
-        opacity:0;
-        @include mini{
+        opacity: 0;
+
+        @include mini {
             width: 350px;
             margin: 0 auto;
             text-align: center;
-            position:static;
-            margin-top:80px;
+            position: static;
+            margin-top: 80px;
         }
+
 
         p {
             color: $main_font_color;
@@ -206,9 +231,10 @@
             margin-bottom: 36px;
             font-size: 18px;
             font-weight: 300;
-            @include mini{
-                margin:0 auto;
-                margin-bottom:36px;
+
+            @include mini {
+                margin: 0 auto;
+                margin-bottom: 36px;
             }
         }
 
@@ -221,56 +247,57 @@
         }
     }
 
-    .learn-fade{
-        animation:drop-learn 1s linear 0s 1;
-        animation-fill-mode:forwards;   
-        @include mobile{
-            animation:drop-learn1200 1s linear 0s 1;
-            animation-fill-mode:forwards;   
+    .learn-fade {
+        animation: drop-learn 1s linear 0s 1;
+        animation-fill-mode: forwards;
+
+        @include mobile {
+            animation: drop-learn1200 1s linear 0s 1;
+            animation-fill-mode: forwards;
         }
-        @include mini{
-            animation:drop-learn720 1s linear 0s 1;
-            animation-fill-mode:forwards; 
+
+
+        @include mini {
+            animation: drop-learn720 1s linear 0s 1;
+            animation-fill-mode: forwards;
         }
     }
 
-    @keyframes drop-learn{
-        0%{
+    @keyframes drop-learn {
+        0% {
             bottom: 43vw;
-            opacity:0;
+            opacity: 0;
         }
-        100%{
-            bottom:25vw;
-            opacity:1;
-        
+
+        100% {
+            bottom: 25vw;
+            opacity: 1;
         }
     }
 
-    @keyframes drop-learn1200{
-        0%{
+    @keyframes drop-learn1200 {
+        0% {
             bottom: 43vw;
-            opacity:0;
+            opacity: 0;
         }
-        100%{
-            bottom:17vw;
-            opacity:1;
-        
+
+        100% {
+            bottom: 17vw;
+            opacity: 1;
         }
     }
 
-    @keyframes drop-learn720{
-        0%{
+    @keyframes drop-learn720 {
+        0% {
             bottom: 43vw;
-            opacity:0;
+            opacity: 0;
         }
-        100%{
-            bottom:-10vw;
-            opacity:1;
-        
+
+        100% {
+            bottom: -10vw;
+            opacity: 1;
         }
     }
-
-
 
     .portfolio-hero {
         background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
@@ -281,13 +308,12 @@
     .portfolio-header {
         margin-left: 34.5%;
         top: 10vw;
-            @include mini{
-                margin-left:0;
-                margin: 0 auto;
-            }
+
+        @include mini {
+            margin-left: 0;
+            margin: 0 auto;
+        }
     }
-
-
 
     #portfolio-list {
         margin: 15vw auto;
@@ -297,12 +323,14 @@
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         overflow: hidden;
         margin-left: 34.5%;
-        @include mini{
+
+        @include mini {
             width: 80vw;
             height: 516px;
             margin: 0 auto;
             margin-top: 100px;
         }
+
 
         .portfolio-picture {
             position: absolute;
@@ -323,21 +351,26 @@
         display: flex;
         padding: 0 8%;
         margin-top: 140px;
-        @include mini{
-            flex-direction:column;
+
+        @include mini {
+            flex-direction: column;
         }
+
 
         li {
             flex-basis: 20%;
             text-align: center;
-            @include mini{
-                margin-bottom:50px;
+
+            @include mini {
+                margin-bottom: 50px;
             }
+
 
             img {
                 width: 30%;
-                @include mini{
-                    max-width:100px;
+
+                @include mini {
+                    max-width: 100px;
                 }
             }
 
@@ -352,27 +385,30 @@
     .resume-container {
         margin-left: 28%;
         margin-top: 7%;
-            @include mini{
-                margin-left:0;
-                margin-top:0;
-                text-align: center;
-            }
+
+        @include mini {
+            margin-left: 0;
+            margin-top: 0;
+            text-align: center;
+        }
     }
 
     //Client Section
 
-    .clients-header{
+    .clients-header {
         top: 63vw;
-        margin-left:34.5%;
-        @include mini{
-            display:none;
+        margin-left: 34.5%;
+
+        @include mini {
+            display: none;
         }
     }
 
-    .client-header2{
-        display:none;
-        @include mini{
-            display:block;
+    .client-header2 {
+        display: none;
+
+        @include mini {
+            display: block;
         }
     }
 
@@ -384,9 +420,10 @@
         margin-top: 150px;
         padding-left: 0;
         padding: 0 120px;
-        @include mini{
-            padding:0 60px;
-            margin-top:0;
+
+        @include mini {
+            padding: 0 60px;
+            margin-top: 0;
         }
     }
 
@@ -398,10 +435,11 @@
             height: 30%;
             width: 63%;
             padding: 20px;
-                @include mini{
-                    width:100%;
-                    height:auto;
-                }
+
+            @include mini {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 
@@ -446,24 +484,23 @@
     }
 
     .clients-header:before {
-            left: 3px;
-            @include mini{
-                left:49px
-            }
+        left: 3px;
+
+        @include mini {
+            left: 49px;
+        }
+    }
+
+    .clients-header2{
+        display:none;
+        @include mini{
+            display:block;
+        }
     }
 
     .clients-list {
         margin: 0 auto;
         margin-top: 145px;
-    }
-
-    .flickity-prev-next-button {
-        border: none;
-        box-shadow: none;
-    }
-
-    .flickity-page-dots{
-        display:none;
     }
 
     //Contact Section
