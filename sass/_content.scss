@@ -128,6 +128,9 @@ form {
 
 .custom-html-widget {
     padding-top: 210px;
+    @include mini{
+        padding-top:120px;
+    }
 }
 
 .wpcf7 {
@@ -161,6 +164,8 @@ form {
 
     @include mini {
         margin: 0 auto;
+        font-size:30px;
+        text-align:center;
     }
 }
 

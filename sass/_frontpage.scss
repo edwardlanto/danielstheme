@@ -66,6 +66,7 @@
         position: absolute;
         top: 34%;
         z-index: 3;
+        text-align:center;
 
         @include mini {
             position: static;
@@ -86,7 +87,7 @@
 
 
             @include mini {
-                font-size: 19px;
+                font-size: 29px;
                 margin-bottom: 0;
             }
         }
@@ -102,7 +103,7 @@
 
 
             @include mini {
-                font-size: 12px;
+                font-size: 16px;
             }
         }
     }
@@ -120,6 +121,9 @@
         position: relative;
         padding-top: 24rem;
         min-height: 743px;
+        @include mini{
+            padding-top:90px;
+        }
     }
 
     .about-header, .portfolio-header, .clients-header, .clients-header2 {
@@ -136,6 +140,7 @@
             margin-left: 0;
             text-align: center;
             margin: 0 auto;
+            font-size:25px;
         }
     }
 
@@ -179,7 +184,7 @@
                 background:#fff;
                 border:3px solid $main_color;
                 text-decoration:none;
-                letter-spacing:1px;
+                letter-spacing:1px; 
             }
         }
     }
@@ -196,7 +201,8 @@
         min-height: 620px;
 
         @include mini {
-            margin-bottom: 20vw;
+            margin-bottom: 60px;
+            margin-top:20px;
         }
     }
 
@@ -351,6 +357,9 @@
         display: flex;
         padding: 0 8%;
         margin-top: 140px;
+        @include mini{
+            margin-top:90px;
+        }
 
         @include mini {
             flex-direction: column;
@@ -412,8 +421,24 @@
         }
     }
 
-    .client-section {
-        margin-bottom: 160px;
+    .clients-header:before {
+        left: 3px;
+
+        @include mini {
+            left: 49px;
+        }
+    }
+
+    .clients-header2{
+        display:none;
+        @include mini{
+            display:block;
+        }
+    }
+
+    .clients-list {
+        margin: 0 auto;
+        margin-top: 145px;
     }
 
     .main-carousel {
@@ -424,6 +449,7 @@
         @include mini {
             padding: 0 60px;
             margin-top: 0;
+            height:350px;
         }
     }
 
@@ -483,24 +509,9 @@
         height: 450px !important;
     }
 
-    .clients-header:before {
-        left: 3px;
 
-        @include mini {
-            left: 49px;
-        }
-    }
-
-    .clients-header2{
-        display:none;
-        @include mini{
-            display:block;
-        }
-    }
-
-    .clients-list {
-        margin: 0 auto;
-        margin-top: 145px;
+    .flickity-prev-next-button{
+        top:30%;
     }
 
     //Contact Section
