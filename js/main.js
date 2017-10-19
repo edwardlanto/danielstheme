@@ -1,9 +1,13 @@
 (function ($) {
 
+    //Hamburger Menu
+
     $('.hamburger').on('click', function () {
         $('.bar').toggleClass('animate');
         $('.nav-list').slideToggle('slow')
     })
+
+    //Carousel on breakpoint
 
     if ($(window).width() < 481) {
         $('.portfolio-wrapper').removeClass('filtr-container').addClass('main-carousel');
@@ -11,6 +15,8 @@
     } else {
         $('.portfolio-wrapper').addClass('filtr-container').removeClass('main-carousel');
     }
+
+    //Smooth Scroll
 
     $('a[href*="#"]:not([href="#"])').click(function () {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -23,9 +29,9 @@
                 return false;
             }
         }
-    }); //smooth-scroll function bracket
+    });
 
-
+    // Trigger Animation
 
     $(window).scroll(function () {
         $('.learn-more-container').each(function () {
@@ -41,6 +47,8 @@
             }
         });
     });
+
+    //First Shuffle
 
 
     $('.first-shuffle').click();
@@ -99,7 +107,6 @@
             "margin-top": "100vw"
         })
     })
-
 
     if ($('filtr.container.has-filterizr').length >= 0) {
         $('.filtr-container').filterizr();

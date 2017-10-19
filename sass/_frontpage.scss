@@ -26,9 +26,10 @@
         top: 10.2vw;
         height: 40vw;
         width: 50%;
-        animation: hero-move 1.2s ease-in 0s 1;
+        animation: hero-move 1.5s ease-out 0.7s 1;
         animation-fill-mode: forwards;
         z-index: 1000;
+        transform: translate(50vw, -200px) rotate(0deg);
 
         @include mini {
             display: none;
@@ -52,7 +53,7 @@
 
     @keyframes hero-move {
         0% {
-            transform: translate(400px, -100px) rotate(0deg);
+            transform: translate(50vw, -200px) rotate(0deg);
         }
 
         100% {
@@ -184,7 +185,6 @@
                 background:#fff;
                 border:3px solid $main_color;
                 text-decoration:none;
-                letter-spacing:1px; 
             }
         }
     }
@@ -308,7 +308,7 @@
     .portfolio-hero {
         background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
         background-size: 100vw 57vw;
-        height: 900px;
+        height: 1000px;
     }
 
     .portfolio-header {
@@ -405,7 +405,7 @@
     //Client Section
 
     .clients-header {
-        top: 63vw;
+        top: 66vw;
         margin-left: 34.5%;
 
         @include mini {

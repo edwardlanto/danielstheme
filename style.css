@@ -37,6 +37,53 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -500,9 +547,10 @@ big {
     top: 10.2vw;
     height: 40vw;
     width: 50%;
-    animation: hero-move 1.2s ease-in 0s 1;
+    animation: hero-move 1.5s ease-out 0.7s 1;
     animation-fill-mode: forwards;
-    z-index: 1000; }
+    z-index: 1000;
+    transform: translate(50vw, -200px) rotate(0deg); }
     @media (max-width: 725px) {
       .home .hero-icon {
         display: none; } }
@@ -519,7 +567,7 @@ big {
 
 @keyframes hero-move {
   0% {
-    transform: translate(400px, -100px) rotate(0deg); }
+    transform: translate(50vw, -200px) rotate(0deg); }
   100% {
     transform: translate(0) rotate(5deg); } }
   .home .name-container {
@@ -615,8 +663,7 @@ big {
     .home .resume a:hover {
       background: #fff;
       border: 3px solid #f8d406;
-      text-decoration: none;
-      letter-spacing: 1px; }
+      text-decoration: none; }
   @media (max-width: 725px) {
     .home .resume1 {
       margin-bottom: 100px; } }
@@ -701,7 +748,7 @@ big {
   .home .portfolio-hero {
     background: url(../../assets/Portfolio-cutout.png) no-repeat 50%;
     background-size: 100vw 57vw;
-    height: 900px; }
+    height: 1000px; }
   .home .portfolio-header {
     margin-left: 34.5%;
     top: 10vw; }
@@ -768,7 +815,7 @@ big {
         margin-top: 0;
         text-align: center; } }
   .home .clients-header {
-    top: 63vw;
+    top: 66vw;
     margin-left: 34.5%; }
     @media (max-width: 725px) {
       .home .clients-header {
@@ -1309,6 +1356,9 @@ a {
 # Content
 --------------------------------------------------------------*/
 /* Posts and pages */
+#main {
+  position: relative; }
+
 .sticky {
   display: block; }
 
@@ -1477,6 +1527,39 @@ textarea {
 .flickity-page-dots {
   display: none; }
 
+.social-container {
+  background: #f8d406;
+  background: #f8d406;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1%; }
+  @media (max-width: 725px) {
+    .social-container {
+      right: 0; } }
+  .social-container i {
+    font-size: 2rem;
+    background: #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    color: #f8d406;
+    transition: all 0.3s ease-in-out;
+    margin: 0 10px; }
+    .social-container i:hover {
+      background: #fff;
+      color: #000; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1541,3 +1624,114 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*! Flickity v2.0.10
+http://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled {
+  position: relative; }
+
+.flickity-enabled:focus {
+  outline: 0; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%; }
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transform: translateY(-50%); }
+
+.flickity-prev-next-button:hover {
+  background: #fff; }
+
+.flickity-prev-next-button:focus {
+  outline: 0;
+  box-shadow: 0 0 0 5px #09f; }
+
+.flickity-prev-next-button:active {
+  opacity: .6; }
+
+.flickity-prev-next-button.previous {
+  left: 10px; }
+
+.flickity-prev-next-button.next {
+  right: 10px; }
+
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px; }
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px; }
+
+.flickity-prev-next-button:disabled {
+  opacity: .3;
+  cursor: auto; }
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%; }
+
+.flickity-prev-next-button .arrow {
+  fill: #333; }
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1; }
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: .25;
+  cursor: pointer; }
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1; }

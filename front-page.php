@@ -8,13 +8,22 @@ get_header() ?>
                 <li class="nav-item col-md-5ths col-sm-2"><a href="/">Home</a></li>
                 <li class="nav-item col-md-5ths col-sm-2"><a href="#about">About Me</a></li>
                 <li class="nav-item col-md-5ths col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-                        <li class="nav-item col-md-5ths col-sm-2"><a href="#clients">Clients</a></li>
-                        <li class="nav-item col-md-5ths col-sm-2"><a href="#contact">Contact Me</a></li>
+                <li class="nav-item col-md-5ths col-sm-2"><a href="#clients">Clients</a></li>
+                <li class="nav-item col-md-5ths col-sm-2"><a href="#contact">Contact Me</a></li>
             </ul>
+           
             <div class="hero-padding">
                 <div class="hamburger">
                     <div class="bar"></div>	
                 </div>
+            </div>
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/daniel-valdes-art/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.pinterest.ca/danielvaldes8/">
+                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>                
             </div>
                 <div class="polygon2">
                     <!-- <div class="logo">Logo</div> -->

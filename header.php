@@ -14,7 +14,6 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<?php wp_head(); ?>
 	</head>
 

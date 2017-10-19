@@ -16,5 +16,6 @@
 		</div><!-- #page -->
 
 		<?php wp_footer(); ?>
+		<script src="https://use.fontawesome.com/51000e27a8.js"></script>
 	</body>
 </html>

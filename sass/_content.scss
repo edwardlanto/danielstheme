@@ -4,6 +4,10 @@
 
 /* Posts and pages */
 
+#main{
+    position:relative;
+}
+
 .sticky {
     display: block;
 }
@@ -214,4 +218,37 @@ label {
 
 .flickity-page-dots {
     display: none;
+}
+
+//Social Icons
+
+.social-container{
+    background:$main_color;
+    background: #f8d406;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    padding: 1%;
+    @include mini{
+        right:0;
+    }
+    i{
+        font-size: 2rem;
+        background: #000;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color:$main_color;
+        transition:all 0.3s ease-in-out;
+        margin:0 10px;
+        &:hover{
+            background:#fff;
+            color:#000;
+        }
+    }
 }
