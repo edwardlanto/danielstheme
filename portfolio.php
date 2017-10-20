@@ -7,15 +7,27 @@
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
         <ul class="nav-list container row pull-right">
-            <li class="nav-item col-sm-2 col-sm-offset-3"><a href="/#about">About Me</a></li>
-            <li class="nav-item bold-item col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-            <li class="nav-item col-sm-2"><a href="/#clients">Clients</a></li>
-            <li class="nav-item col-sm-2"><a href="/#contact">Contact Me</a></li>
+            <li class="nav-item col-md-5ths col-sm-2 col-sm-offset-2"><a href="/">Home</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="#about">About Me</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="#clients">Clients</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="#contact">Contact Me</a></li>
         </ul>
         <div class="portfolio-header-container container">
-        <div class="hamburger">
-                    <div class="bar"></div>	
-                </div>
+            <div class="hamburger">
+                <div class="bar"></div>	
+            </div>
+            <div class="social-container">
+                <a href="https://www.linkedin.com/in/daniel-valdes-art/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.pinterest.ca/danielvaldes8/">
+                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>         
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>       
+            </div>
             <h1>Portfolio</h1></div>
         <section class="portfolio-gallery">
         <div class="shuffle-nav-wrapper">

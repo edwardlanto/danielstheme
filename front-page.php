@@ -23,6 +23,9 @@ get_header() ?>
                 </a>
                 <a href="https://www.pinterest.ca/danielvaldes8/">
                     <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
                 </a>                
             </div>
                 <div class="polygon2">
