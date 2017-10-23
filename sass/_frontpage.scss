@@ -5,6 +5,10 @@
         overflow-x: hidden;
     }
 
+    .social-container{
+        padding-left:105px;
+    }
+
     .polygon2 {
         background: url(../../assets/final-background.png) no-repeat 50%;
         background-size: 123vw 100%;
@@ -57,7 +61,7 @@
         }
 
         100% {
-            transform: translate(0) rotate(5deg);
+            transform: translate(0) rotate(5.2deg);
         }
     }
 
@@ -67,9 +71,8 @@
         position: absolute;
         top: 34%;
         z-index: 3;
-        text-align:center;
-
         @include mini {
+            text-align:center;
             position: static;
             transform: translateY(-10px);
         }
@@ -198,7 +201,7 @@
     .portfolio-section {
         margin-bottom: 30vw;
         margin-top: 11vw;
-        min-height: 620px;
+        min-height: 70px;
 
         @include mini {
             margin-bottom: 60px;
@@ -405,7 +408,7 @@
     //Client Section
 
     .clients-header {
-        top: 66vw;
+        top: 68vw;
         margin-left: 34.5%;
 
         @include mini {
@@ -506,7 +509,7 @@
     }
 
     .flickity-viewport {
-        height: 450px !important;
+        height: 380px !important;
     }
 
 

@@ -2,6 +2,23 @@
 
     //Hamburger Menu
 
+    if ($('filtr.container.has-filterizr').length >= 0) {
+        $('.filtr-container').filterizr();
+    }
+
+    $('.filtr-item').on('click', function () {
+        var filterItemHeight = $(this).height();
+        console.log(filterItemHeight)
+        $(this).removeClass('col-md-3').addClass('col-md-8 col-sm-offset-2')
+        $(this).siblings().addClass('hidden');
+        $(this).css({
+            "transform": ""
+        })
+        $(".image-text").removeClass('hidden');
+
+    })
+
+
     $('.hamburger').on('click', function () {
         $('.bar').toggleClass('animate');
         $('.nav-list').slideToggle('slow')
@@ -84,18 +101,6 @@
 
 
 
-    $('.filtr-item').on('click', function () {
-        var filterItemHeight = $(this).height();
-        console.log(filterItemHeight)
-        $(this).removeClass('col-sm-3').addClass('col-sm-9 col-sm-offset-2')
-        $(this).siblings().addClass('hidden');
-        $('.filtre-container').addClass('row')
-        $(this).css({
-            "transform": ""
-        })
-        $(".image-text").removeClass('hidden');
-
-    })
 
     //redisplay portfolio images
 
@@ -107,10 +112,6 @@
             "margin-top": "100vw"
         })
     })
-
-    if ($('filtr.container.has-filterizr').length >= 0) {
-        $('.filtr-container').filterizr();
-    }
 
 
 

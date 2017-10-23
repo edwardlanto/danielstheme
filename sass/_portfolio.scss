@@ -152,6 +152,7 @@
             font-weight:900;
             margin-bottom:0;
             font-size:40px;
+            color:#000;
         }
         p{
             font-family:'Lato', sans-serif;
@@ -228,14 +229,18 @@
     }
 
     //Social
-
-    .social-container{
-        background:transparent;
-        i:hover{
-            background:$main_color;
-            color:#fff;
+    .portfolio-header-container{
+        .social-container{
+            background:transparent;
+            i{
+                color:#fff;
+                &:hover{
+                    color:$main_color;
+                    background:#000;
+                }
+            }
         }
-    }
+}
 
     
 

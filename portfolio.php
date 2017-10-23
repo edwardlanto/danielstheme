@@ -8,10 +8,10 @@
 		<main id="main" class="site-main" role="main">
         <ul class="nav-list container row pull-right">
             <li class="nav-item col-md-5ths col-sm-2 col-sm-offset-2"><a href="/">Home</a></li>
-            <li class="nav-item col-md-5ths col-sm-2"><a href="#about">About Me</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="http://daniel-valdes.com/#about">About Me</a></li>
             <li class="nav-item col-md-5ths col-sm-2"><a href="<?php echo get_page_link(31) ?>">Portfolio</a></li>
-            <li class="nav-item col-md-5ths col-sm-2"><a href="#clients">Clients</a></li>
-            <li class="nav-item col-md-5ths col-sm-2"><a href="#contact">Contact Me</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="http://daniel-valdes.com/#clients">Clients</a></li>
+            <li class="nav-item col-md-5ths col-sm-2"><a href="http://daniel-valdes.com/#contact">Contact Me</a></li>
         </ul>
         <div class="portfolio-header-container container">
             <div class="hamburger">

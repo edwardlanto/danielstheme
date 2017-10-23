@@ -91,7 +91,7 @@ form {
     margin: 0 auto;
 
     textarea {
-        height: 221px;
+        height: 231px;
         padding-top: 20px;
     }
 
@@ -251,4 +251,13 @@ label {
             color:#000;
         }
     }
+}
+
+.wpcf7-validation-errors{
+    border:none !important;
+    color:red;
+}
+
+*:focus {
+    outline: none;
 }
